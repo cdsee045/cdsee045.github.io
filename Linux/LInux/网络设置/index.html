@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="基础知识, Phoox">
-    <meta name="description" content="ifconfig指令列出系统的网络接口 有线网卡 无线网卡 虚拟网卡 usb转网卡例：wlp0s20f3: flags&amp;#x3D;4163&amp;lt;UP,BROADCAST,RUNNING,MULTICAST&amp;gt;  mtu 1500&amp;em">
+    <meta name="description" content="Linux中编写程序编写Python程序在hello_world.py中写入python print(&amp;#39;hello world&amp;#39;) 终端输入python3 hello_world.py 编译并运行
+编写C++程序12345#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -382,7 +383,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-04-27
+                    2026-04-28
                 </div>
                 
 
@@ -403,7 +404,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="ifconfig指令"><a href="#ifconfig指令" class="headerlink" title="ifconfig指令"></a>ifconfig指令</h4><p>列出系统的网络接口 有线网卡 无线网卡 虚拟网卡 usb转网卡<br>例：wlp0s20f3: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; inet 172.21.58.59  netmask 255.255.128.0  broadcast 172.21.127.255<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;inet6 2403:ac00:b101:260:b4bf:9e16:bde5:a094  prefixlen 64  scopeid 0x0<global><br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;inet6 2403:ac00:b101:260:7fd0:982a:c9a1:753b  prefixlen 64  scopeid 0x0<global><br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;inet6 fe80::f84e:a9c9:7c61:1f7b  prefixlen 64  scopeid 0x20<link><br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;ether 60:e3:2b:d9:d8:fc  txqueuelen 1000  (以太网)<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;RX packets 230563  bytes 251608316 (251.6 MB)<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;RX errors 0  dropped 11  overruns 0  frame 0<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;TX packets 108317  bytes 34368703 (34.3 MB)<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p>
+                <h4 id="Linux中编写程序"><a href="#Linux中编写程序" class="headerlink" title="Linux中编写程序"></a>Linux中编写程序</h4><h5 id="编写Python程序"><a href="#编写Python程序" class="headerlink" title="编写Python程序"></a>编写Python程序</h5><p>在hello_world.py中写入<br><code>python print(&#39;hello world&#39;) </code><br>终端输入<code>python3 hello_world.py</code> 编译并运行</p>
+<h5 id="编写C-程序"><a href="#编写C-程序" class="headerlink" title="编写C++程序"></a>编写C++程序</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&quot;iostream&quot;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;    std::cout&lt;&lt;<span class="string">&quot;hello world&quot;</span>&lt;&lt;std::endl;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>1.使用g++编译运行 终端输入<code>g++ hello_world.cpp</code> 编译文件，输入<code>./a.out</code>执行生成的可执行文件<br>2.使用cmake编译运行<br>编写cmakelist.txt文本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION 3.8)</span><br><span class="line">project(helloword)</span><br><span class="line">add_executable(hello hello_world.cpp)</span><br></pre></td></tr></table></figure>
+<p>终端输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake . </span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+<p>编译后输入<code>./hello</code>执行生成的文件</p>
+<h4 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h4><p><code>printenv</code> 查看所有环境变量<br><code>echo $path</code> 查看指定的环境变量</p>
+<h4 id="ifconfig指令"><a href="#ifconfig指令" class="headerlink" title="ifconfig指令"></a>ifconfig指令</h4><p>列出系统的网络接口 有线网卡 无线网卡 虚拟网卡 usb转网卡<br>例：wlp0s20f3: flags&#x3D;4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; inet 172.21.58.59  netmask 255.255.128.0  broadcast 172.21.127.255<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;inet6 2403:ac00:b101:260:b4bf:9e16:bde5:a094  prefixlen 64  scopeid 0x0<global><br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;inet6 2403:ac00:b101:260:7fd0:982a:c9a1:753b  prefixlen 64  scopeid 0x0<global><br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;inet6 fe80::f84e:a9c9:7c61:1f7b  prefixlen 64  scopeid 0x20<link><br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;ether 60:e3:2b:d9:d8:fc  txqueuelen 1000  (以太网)<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;RX packets 230563  bytes 251608316 (251.6 MB)<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;RX errors 0  dropped 11  overruns 0  frame 0<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;TX packets 108317  bytes 34368703 (34.3 MB)<br>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</p>
 <h5 id="第一行表示网卡名称和状态"><a href="#第一行表示网卡名称和状态" class="headerlink" title="第一行表示网卡名称和状态"></a>第一行表示网卡名称和状态</h5><p>en开头的代表有线网卡，wl开头的代表无线网卡<br>4163指所有标志位的缩写总和<br>up表示驱动正常启动，RUNNING表示有线连接正常<br>BROADCAST表示网卡支持广播，MULTICAST表示网卡支持多播<br>mtu 1500(Maximum Transmission Unit)最大传输单元 表示最大传输1500字节</p>
 <h5 id="第二三四五行表示ip地址信息"><a href="#第二三四五行表示ip地址信息" class="headerlink" title="第二三四五行表示ip地址信息"></a>第二三四五行表示ip地址信息</h5><p>inet：这是你的 IPv4 地址。在这个例子中是  172.21.58.59<br>netmask：子网掩码。255.255.128.0<br>broadcast：广播地址。<br>inet6：IPv6 地址（一般情况下在调试机器人时可以暂时忽略）</p>
 <h5 id="第六行表示硬件mac地址"><a href="#第六行表示硬件mac地址" class="headerlink" title="第六行表示硬件mac地址"></a>第六行表示硬件mac地址</h5><p>ether表示网卡的物理地址 唯一的</p>
@@ -537,7 +546,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-28
                             </span>
                         <span class="publish-author">
                             
@@ -579,7 +588,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-28
                             </span>
                         <span class="publish-author">
                             
