@@ -4,12 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="matlab, Phoox">
-    <meta name="description" content="matlab数值计算变量、常量、字符串变量 第一次出现时定义常量 预先定义的变量字符串 字符的集合
-矩阵矩阵的生成&amp;amp;lt;html&amp;gt; 
-  &amp;amp;lt;head&amp;gt; 
-  &amp;amp;lt;/head&amp;gt;
-&amp;amp;">
+    <meta name="keywords" content="Python类与对象, Phoox">
+    <meta name="description" content="Python 类与对象
+1. 什么是类和对象在 Python 中，类和对象是面向对象编程的基础。
+
+类（class）：一类事物的“模板”或“图纸”。
+对象（object）：根据类创建出来的具体实例。
+
+你可以把类理解成“设计图”，把对象理解">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +23,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>matlab | Phoox</title>
+    <title>Python类与对象 | Phoox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +339,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">matlab</h1>
+                    <h1 class="description center-align post-title">Python类与对象</h1>
                 </div>
             </div>
         </div>
@@ -378,8 +380,8 @@
                                 工具
                             </a>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/matlab/" class="post-category">
-                                matlab
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -391,7 +393,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-08
+                    2026-05-28
                 </div>
                 
 
@@ -415,21 +417,264 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="matlab数值计算"><a href="#matlab数值计算" class="headerlink" title="matlab数值计算"></a>matlab数值计算</h2><h4 id="变量、常量、字符串"><a href="#变量、常量、字符串" class="headerlink" title="变量、常量、字符串"></a>变量、常量、字符串</h4><p>变量 第一次出现时定义<br>常量 预先定义的变量<br>字符串 字符的集合</p>
-<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="矩阵的生成"><a href="#矩阵的生成" class="headerlink" title="矩阵的生成"></a>矩阵的生成</h4><pre><code>&amp;lt;html&gt; 
-  &amp;lt;head&gt; 
-  &amp;lt;/head&gt;
-&amp;lt;/html&gt;
-</code></pre><pre class="line-numbers language-none"><code class="language-none">a&#x3D;[1 2 3;4 5 6]
-c&#x3D;[a,b]
-m&#x3D;[1:2:10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h5 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h5><p>单位矩阵  eye(m,n)<br>零矩阵   zeros(m,n)<br>一矩阵    ones(m,n)<br>对角阵   对角元素向量=[a1.a2,a3]  A=diag(v)<br>随机矩阵  rand(m,n)</p>
-<h4 id="矩阵操作"><a href="#矩阵操作" class="headerlink" title="矩阵操作"></a>矩阵操作</h4><p>下标<br>A(m,n)<br>A(:,n)  提取第n列<br>A(m,:)  提取第m行<br>A‘      转秩<br>inv(A)  求逆<br>det(A)  求行列式<br>A\b     A<em>x=b<br>A/b     x</em>b=A</p>
-<h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><h4 id="多项式表示"><a href="#多项式表示" class="headerlink" title="多项式表示"></a>多项式表示</h4><h2 id="matlab符号运算"><a href="#matlab符号运算" class="headerlink" title="matlab符号运算"></a>matlab符号运算</h2><p>符号运算无需先对变量赋值</p>
-<h2 id="matlab程序设计"><a href="#matlab程序设计" class="headerlink" title="matlab程序设计"></a>matlab程序设计</h2><p>find()方法<br><pre class="line-numbers language-none"><code class="language-none">find(x)         #返回x中不等于0的元素的下标
-find(0&lt;x&amp;x&lt;10)  #返回x中大于0小于10的元素的下标<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<p>root()方法<br><pre class="line-numbers language-none"><code class="language-none">p&#x3D;[1 -6 -72 -27]
-r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+                <h1 id="Python-类与对象"><a href="#Python-类与对象" class="headerlink" title="Python 类与对象"></a>Python 类与对象</h1><hr>
+<h2 id="1-什么是类和对象"><a href="#1-什么是类和对象" class="headerlink" title="1. 什么是类和对象"></a>1. 什么是类和对象</h2><p>在 Python 中，类和对象是面向对象编程的基础。</p>
+<ul>
+<li><strong>类（class）</strong>：一类事物的“模板”或“图纸”。</li>
+<li><strong>对象（object）</strong>：根据类创建出来的具体实例。</li>
+</ul>
+<p>你可以把类理解成“设计图”，把对象理解成“按设计图造出来的实体”。</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>如果我们要描述“学生”：</p>
+<ul>
+<li>类：学生模板，规定学生有哪些信息和行为</li>
+<li>对象：张三、李四这些具体学生</li>
+</ul>
+<p>类通常包含两类内容：</p>
+<ul>
+<li><strong>属性</strong>：描述这个对象有什么特征，比如姓名、年龄、成绩</li>
+<li><strong>方法</strong>：描述这个对象能做什么，比如学习、考试、休息</li>
+</ul>
+<hr>
+<h2 id="2-类的基本语法"><a href="#2-类的基本语法" class="headerlink" title="2. 类的基本语法"></a>2. 类的基本语法</h2><p>定义类最常见的形式如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Person:
+    pass<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这里：</p>
+<ul>
+<li><code>class</code> 是定义类的关键字</li>
+<li><code>Person</code> 是类名，通常使用大驼峰命名法</li>
+<li><code>pass</code> 表示暂时什么都不写，作为占位</li>
+</ul>
+<h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">p1 &#x3D; Person()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这表示用 <code>Person</code> 类创建了一个对象 <code>p1</code>。</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ul>
+<li>类名一般首字母大写，如 <code>Student</code>、<code>Employee</code>、<code>Animal</code></li>
+<li>文件名通常用小写加下划线，如 <code>student.py</code></li>
+<li>类名要尽量表达清楚用途</li>
+</ul>
+<hr>
+<h2 id="3-self-和-init"><a href="#3-self-和-init" class="headerlink" title="3. self 和 __init__"></a>3. <code>self</code> 和 <code>__init__</code></h2><p>这两个是类中最重要的基础。</p>
+<h3 id="3-1-self"><a href="#3-1-self" class="headerlink" title="3.1 self"></a>3.1 <code>self</code></h3><p><code>self</code> 表示“当前这个对象自己”。</p>
+<p>在类的方法里，<code>self</code> 是第一个参数，Python 会自动把当前对象传进去。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Person:
+    def say_hello(self):
+        print(&quot;hello&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>调用时：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p &#x3D; Person()
+p.say_hello()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Python 实际上会把 <code>p</code> 作为第一个参数传入方法。</p>
+<h3 id="3-2-init-初始化方法"><a href="#3-2-init-初始化方法" class="headerlink" title="3.2 __init__ 初始化方法"></a>3.2 <code>__init__</code> 初始化方法</h3><p><code>__init__</code> 是初始化方法，也叫构造方法。<br>当你创建对象时，它会自动执行。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Person:
+    def __init__(self, name, age):
+        self.name &#x3D; name
+        self.age &#x3D; age<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>创建对象：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p &#x3D; Person(&quot;张三&quot;, 18)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>此时：</p>
+<ul>
+<li><code>p.name</code> 的值是 <code>张三</code></li>
+<li><code>p.age</code> 的值是 <code>18</code></li>
+</ul>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p><code>__init__</code> 的作用就是给对象设置初始属性。</p>
+<hr>
+<h2 id="4-属性、方法与实例"><a href="#4-属性、方法与实例" class="headerlink" title="4. 属性、方法与实例"></a>4. 属性、方法与实例</h2><h3 id="4-1-属性"><a href="#4-1-属性" class="headerlink" title="4.1 属性"></a>4.1 属性</h3><p>属性是对象的数据，例如：</p>
+<ul>
+<li>姓名</li>
+<li>年龄</li>
+<li>工资</li>
+<li>库存</li>
+</ul>
+<p>属性分为两种常见类型：</p>
+<ul>
+<li><strong>实例属性</strong>：属于某个对象</li>
+<li><strong>类属性</strong>：属于整个类，所有对象共享</li>
+</ul>
+<h3 id="4-2-方法"><a href="#4-2-方法" class="headerlink" title="4.2 方法"></a>4.2 方法</h3><p>方法就是类里面定义的函数，用来描述行为。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Student:
+    def study(self):
+        print(&quot;正在学习&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-3-实例"><a href="#4-3-实例" class="headerlink" title="4.3 实例"></a>4.3 实例</h3><p>对象也可以叫实例。实例就是类的具体表现。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s &#x3D; Student()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>Student</code> 是类，<code>s</code> 是实例。</p>
+<hr>
+<h2 id="5-封装"><a href="#5-封装" class="headerlink" title="5. 封装"></a>5. 封装</h2><p>封装是面向对象三大特性之一。</p>
+<h3 id="5-1-什么是封装"><a href="#5-1-什么是封装" class="headerlink" title="5.1 什么是封装"></a>5.1 什么是封装</h3><p>封装就是：</p>
+<ul>
+<li>把数据和操作数据的方法放在一起</li>
+<li>尽量隐藏内部细节</li>
+<li>对外只提供必要的使用方式</li>
+</ul>
+<h3 id="5-2-为什么要封装"><a href="#5-2-为什么要封装" class="headerlink" title="5.2 为什么要封装"></a>5.2 为什么要封装</h3><p>封装的好处：</p>
+<ul>
+<li>防止数据被随便修改</li>
+<li>提高代码安全性</li>
+<li>让代码更容易维护</li>
+</ul>
+<h3 id="5-3-私有属性"><a href="#5-3-私有属性" class="headerlink" title="5.3 私有属性"></a>5.3 私有属性</h3><p>在 Python 中，属性名前面加双下划线 <code>__</code>，通常表示私有属性。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Student:
+    def __init__(self, name):
+        self.__name &#x3D; name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>外部通常不能直接访问 <code>__name</code>。</p>
+<h3 id="5-4-通过方法访问私有属性"><a href="#5-4-通过方法访问私有属性" class="headerlink" title="5.4 通过方法访问私有属性"></a>5.4 通过方法访问私有属性</h3><p>通常我们会写“获取方法”：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Student:
+    def __init__(self, name):
+        self.__name &#x3D; name
+
+    def get_name(self):
+        return self.__name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样外部可以通过 <code>get_name()</code> 访问数据，而不是直接乱改。</p>
+<h3 id="5-5-常见命名习惯"><a href="#5-5-常见命名习惯" class="headerlink" title="5.5 常见命名习惯"></a>5.5 常见命名习惯</h3><ul>
+<li><code>__name</code>：私有属性</li>
+<li><code>_name</code>：通常表示“受保护属性”或内部使用，虽然不是严格私有，但一般不建议外部直接改</li>
+<li><code>name</code>：公有属性，可以直接访问</li>
+</ul>
+<hr>
+<h2 id="6-继承"><a href="#6-继承" class="headerlink" title="6. 继承"></a>6. 继承</h2><p>继承也是面向对象三大特性之一。</p>
+<h3 id="6-1-什么是继承"><a href="#6-1-什么是继承" class="headerlink" title="6.1 什么是继承"></a>6.1 什么是继承</h3><p>继承表示：一个类可以获取另一个类的属性和方法，并在此基础上扩展。</p>
+<ul>
+<li>父类：基类、超类</li>
+<li>子类：派生类</li>
+</ul>
+<h3 id="6-2-语法"><a href="#6-2-语法" class="headerlink" title="6.2 语法"></a>6.2 语法</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">class Animal:
+    def eat(self):
+        print(&quot;吃东西&quot;)
+
+class Dog(Animal):
+    def bark(self):
+        print(&quot;汪汪叫&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>Dog</code> 继承了 <code>Animal</code>，因此 <code>Dog</code> 对象可以使用 <code>eat()</code>。</p>
+<h3 id="6-3-super"><a href="#6-3-super" class="headerlink" title="6.3 super()"></a>6.3 <code>super()</code></h3><p>当子类需要调用父类的初始化方法时，常用 <code>super()</code>。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Animal:
+    def __init__(self, name):
+        self.name &#x3D; name
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed &#x3D; breed<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-4-继承的好处"><a href="#6-4-继承的好处" class="headerlink" title="6.4 继承的好处"></a>6.4 继承的好处</h3><ul>
+<li>减少重复代码</li>
+<li>提高复用性</li>
+<li>方便扩展新功能</li>
+</ul>
+<hr>
+<h2 id="7-多态"><a href="#7-多态" class="headerlink" title="7. 多态"></a>7. 多态</h2><p>多态也是面向对象三大特性之一。</p>
+<h3 id="7-1-什么是多态"><a href="#7-1-什么是多态" class="headerlink" title="7.1 什么是多态"></a>7.1 什么是多态</h3><p>多态指的是：</p>
+<ul>
+<li>同一个方法名</li>
+<li>在不同子类中有不同表现</li>
+</ul>
+<h3 id="7-2-例子"><a href="#7-2-例子" class="headerlink" title="7.2 例子"></a>7.2 例子</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        print(&quot;汪汪&quot;)
+
+class Cat(Animal):
+    def speak(self):
+        print(&quot;喵喵&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>虽然都叫 <code>speak()</code>，但不同动物说话方式不同。</p>
+<h3 id="7-3-多态的意义"><a href="#7-3-多态的意义" class="headerlink" title="7.3 多态的意义"></a>7.3 多态的意义</h3><p>多态让代码更灵活：</p>
+<ul>
+<li>统一接口</li>
+<li>不同实现</li>
+<li>更容易扩展</li>
+</ul>
+<hr>
+<h2 id="8-类变量与实例变量"><a href="#8-类变量与实例变量" class="headerlink" title="8. 类变量与实例变量"></a>8. 类变量与实例变量</h2><h3 id="8-1-实例变量"><a href="#8-1-实例变量" class="headerlink" title="8.1 实例变量"></a>8.1 实例变量</h3><p>实例变量属于某个具体对象，每个对象可以不同。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Person:
+    def __init__(self, name):
+        self.name &#x3D; name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="8-2-类变量"><a href="#8-2-类变量" class="headerlink" title="8.2 类变量"></a>8.2 类变量</h3><p>类变量属于类本身，所有对象共享。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Person:
+    country &#x3D; &quot;中国&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="8-3-区别"><a href="#8-3-区别" class="headerlink" title="8.3 区别"></a>8.3 区别</h3><ul>
+<li>实例变量：每个对象有自己的值</li>
+<li>类变量：所有对象共用一个值</li>
+</ul>
+<h3 id="8-4-使用建议"><a href="#8-4-使用建议" class="headerlink" title="8.4 使用建议"></a>8.4 使用建议</h3><p>如果一个数据是所有对象共有的，可以用类变量；如果是每个对象各自不同的，应该用实例变量。</p>
+<hr>
+<h2 id="9-常见魔术方法"><a href="#9-常见魔术方法" class="headerlink" title="9. 常见魔术方法"></a>9. 常见魔术方法</h2><p>魔术方法是 Python 中以双下划线开头和结尾的方法，例如 <code>__init__</code>。</p>
+<h3 id="常见方法"><a href="#常见方法" class="headerlink" title="常见方法"></a>常见方法</h3><ul>
+<li><code>__init__</code>：初始化对象</li>
+<li><code>__str__</code>：对象转字符串时自动调用</li>
+<li><code>__repr__</code>：对象的正式字符串表示</li>
+<li><code>__len__</code>：调用 <code>len()</code> 时使用</li>
+<li><code>__add__</code>：处理加法运算</li>
+</ul>
+<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">class Student:
+    def __init__(self, name):
+        self.name &#x3D; name
+
+    def __str__(self):
+        return f&quot;Student(name&#x3D;&#123;self.name&#125;)&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>调用：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s &#x3D; Student(&quot;张三&quot;)
+print(s)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>输出时会自动调用 <code>__str__</code>。</p>
+<hr>
+<h2 id="10-实战示例"><a href="#10-实战示例" class="headerlink" title="10. 实战示例"></a>10. 实战示例</h2><p>下面用一个员工系统的小例子把知识串起来。</p>
+<h3 id="10-1-需求"><a href="#10-1-需求" class="headerlink" title="10.1 需求"></a>10.1 需求</h3><p>我们希望描述员工，并区分：</p>
+<ul>
+<li>全职员工：基础工资 + 绩效奖金</li>
+<li>兼职员工：基础工资 + 工时 × 时薪</li>
+</ul>
+<h3 id="10-2-设计思路"><a href="#10-2-设计思路" class="headerlink" title="10.2 设计思路"></a>10.2 设计思路</h3><ul>
+<li><code>Employee</code>：父类，保存姓名、工号、基础工资</li>
+<li><code>FullTime</code>：子类，增加绩效奖金</li>
+<li><code>PartTime</code>：子类，增加工时和时薪</li>
+</ul>
+<h3 id="10-3-代码理解重点"><a href="#10-3-代码理解重点" class="headerlink" title="10.3 代码理解重点"></a>10.3 代码理解重点</h3><ul>
+<li><code>Employee</code> 负责公共信息</li>
+<li>子类继承公共信息</li>
+<li>子类重写 <code>get_salary()</code> 实现不同薪资算法</li>
+<li>使用 <code>try-except</code> 处理非法输入</li>
+</ul>
+<h3 id="10-4-模板"><a href="#10-4-模板" class="headerlink" title="10.4 模板"></a>10.4 模板</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">class 父类:
+    def __init__(self, 公共属性):
+        ...
+
+    def 公共方法(self):
+        ...
+
+class 子类(父类):
+    def __init__(self, 公共属性, 子类属性):
+        super().__init__(公共属性)
+        ...
+
+    def 重写方法(self):
+        ...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="11-常见错误与排查"><a href="#11-常见错误与排查" class="headerlink" title="11. 常见错误与排查"></a>11. 常见错误与排查</h2><h3 id="11-1-忘记写-self"><a href="#11-1-忘记写-self" class="headerlink" title="11.1 忘记写 self"></a>11.1 忘记写 <code>self</code></h3><p>错误示例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Student:
+    def say():
+        print(&quot;hi&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>正确写法：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Student:
+    def say(self):
+        print(&quot;hi&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="11-2-把方法当变量用"><a href="#11-2-把方法当变量用" class="headerlink" title="11.2 把方法当变量用"></a>11.2 把方法当变量用</h3><p>如果写的是：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">self.get_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这只是方法本身，没有执行。</p>
+<p>如果要调用方法，应该写：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">self.get_name()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="11-3-私有属性直接访问"><a href="#11-3-私有属性直接访问" class="headerlink" title="11.3 私有属性直接访问"></a>11.3 私有属性直接访问</h3><p>如果属性写成 <code>__name</code>，一般不要直接在类外部访问。</p>
+<p>推荐通过方法访问：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">obj.get_name()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="11-4-子类初始化忘记调用父类"><a href="#11-4-子类初始化忘记调用父类" class="headerlink" title="11.4 子类初始化忘记调用父类"></a>11.4 子类初始化忘记调用父类</h3><p>如果子类需要父类属性，一定要记得：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">super().__init__(...)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="11-5-输出格式混乱"><a href="#11-5-输出格式混乱" class="headerlink" title="11.5 输出格式混乱"></a>11.5 输出格式混乱</h3><p>涉及金额、价格、小数时，推荐使用：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">f&quot;&#123;value:.2f&#125;&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样可以保留两位小数，输出更规范。</p>
+<hr>
+<h2 id="12-小练习"><a href="#12-小练习" class="headerlink" title="12. 小练习"></a>12. 小练习</h2><ol>
+<li>写一个 <code>Person</code> 类，包含姓名和年龄</li>
+<li>写一个 <code>Student</code> 类，继承 <code>Person</code></li>
+<li>给 <code>Student</code> 增加成绩属性</li>
+<li>写一个 <code>speak()</code> 或 <code>show_info()</code> 方法</li>
+<li>用 <code>try-except</code> 处理输入错误</li>
+<li>用 <code>__str__</code> 改善打印效果</li>
+</ol>
 
                 
             </div>
@@ -456,7 +701,7 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/</a>
+                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%B1%BB%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%B1%BB%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,13 +786,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                <a href="/%E5%B7%A5%E5%85%B7/python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python与数据分析">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Python数据类型">
                         
-                        <span class="card-title">Python与数据分析</span>
+                        <span class="card-title">Python数据类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -558,7 +803,7 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-28
                         </span>
                         <span class="publish-author">
                             
@@ -566,6 +811,10 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                             
                             <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
                                     工具
+                                </a>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -582,13 +831,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Linux/%E5%B7%A5%E5%85%B7/LInux/Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                <a href="/uncategorized/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A7%E5%88%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基础知识">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="计算机控制">
                         
-                        <span class="card-title">基础知识</span>
+                        <span class="card-title">计算机控制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -599,16 +848,12 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-26
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            phoox
                             
                         </span>
                     </div>

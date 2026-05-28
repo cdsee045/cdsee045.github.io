@@ -4,12 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="matlab, Phoox">
-    <meta name="description" content="matlab数值计算变量、常量、字符串变量 第一次出现时定义常量 预先定义的变量字符串 字符的集合
-矩阵矩阵的生成&amp;amp;lt;html&amp;gt; 
-  &amp;amp;lt;head&amp;gt; 
-  &amp;amp;lt;/head&amp;gt;
-&amp;amp;">
+    <meta name="keywords" content="Python数据类型, Phoox">
+    <meta name="description" content="Python 数据类型1. 数据类型是什么在程序里，数据可以是数字、文字、真假、列表、字典等不同形式。Python 会根据数据的不同特点，把它们分成不同的类型，这些类型就叫做数据类型。
+为什么要有数据类型因为不同类型的数据，能做的操作不一样">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>matlab | Phoox</title>
+    <title>Python数据类型 | Phoox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">matlab</h1>
+                    <h1 class="description center-align post-title">Python数据类型</h1>
                 </div>
             </div>
         </div>
@@ -378,8 +375,8 @@
                                 工具
                             </a>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/matlab/" class="post-category">
-                                matlab
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -391,7 +388,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-08
+                    2026-05-28
                 </div>
                 
 
@@ -415,21 +412,408 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="matlab数值计算"><a href="#matlab数值计算" class="headerlink" title="matlab数值计算"></a>matlab数值计算</h2><h4 id="变量、常量、字符串"><a href="#变量、常量、字符串" class="headerlink" title="变量、常量、字符串"></a>变量、常量、字符串</h4><p>变量 第一次出现时定义<br>常量 预先定义的变量<br>字符串 字符的集合</p>
-<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="矩阵的生成"><a href="#矩阵的生成" class="headerlink" title="矩阵的生成"></a>矩阵的生成</h4><pre><code>&amp;lt;html&gt; 
-  &amp;lt;head&gt; 
-  &amp;lt;/head&gt;
-&amp;lt;/html&gt;
-</code></pre><pre class="line-numbers language-none"><code class="language-none">a&#x3D;[1 2 3;4 5 6]
-c&#x3D;[a,b]
-m&#x3D;[1:2:10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h5 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h5><p>单位矩阵  eye(m,n)<br>零矩阵   zeros(m,n)<br>一矩阵    ones(m,n)<br>对角阵   对角元素向量=[a1.a2,a3]  A=diag(v)<br>随机矩阵  rand(m,n)</p>
-<h4 id="矩阵操作"><a href="#矩阵操作" class="headerlink" title="矩阵操作"></a>矩阵操作</h4><p>下标<br>A(m,n)<br>A(:,n)  提取第n列<br>A(m,:)  提取第m行<br>A‘      转秩<br>inv(A)  求逆<br>det(A)  求行列式<br>A\b     A<em>x=b<br>A/b     x</em>b=A</p>
-<h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><h4 id="多项式表示"><a href="#多项式表示" class="headerlink" title="多项式表示"></a>多项式表示</h4><h2 id="matlab符号运算"><a href="#matlab符号运算" class="headerlink" title="matlab符号运算"></a>matlab符号运算</h2><p>符号运算无需先对变量赋值</p>
-<h2 id="matlab程序设计"><a href="#matlab程序设计" class="headerlink" title="matlab程序设计"></a>matlab程序设计</h2><p>find()方法<br><pre class="line-numbers language-none"><code class="language-none">find(x)         #返回x中不等于0的元素的下标
-find(0&lt;x&amp;x&lt;10)  #返回x中大于0小于10的元素的下标<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<p>root()方法<br><pre class="line-numbers language-none"><code class="language-none">p&#x3D;[1 -6 -72 -27]
-r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+                <h1 id="Python-数据类型"><a href="#Python-数据类型" class="headerlink" title="Python 数据类型"></a>Python 数据类型</h1><h2 id="1-数据类型是什么"><a href="#1-数据类型是什么" class="headerlink" title="1. 数据类型是什么"></a>1. 数据类型是什么</h2><p>在程序里，数据可以是数字、文字、真假、列表、字典等不同形式。Python 会根据数据的不同特点，把它们分成不同的类型，这些类型就叫做<strong>数据类型</strong>。</p>
+<h3 id="为什么要有数据类型"><a href="#为什么要有数据类型" class="headerlink" title="为什么要有数据类型"></a>为什么要有数据类型</h3><p>因为不同类型的数据，能做的操作不一样。</p>
+<ul>
+<li>数字可以做加减乘除</li>
+<li>字符串可以拼接、查找、切片</li>
+<li>列表可以添加、删除、排序</li>
+<li>字典可以通过键获取值</li>
+</ul>
+<p>如果把所有数据都混在一起，程序会非常混乱，所以 Python 需要用类型来管理它们。</p>
+<hr>
+<h2 id="2-变量与类型"><a href="#2-变量与类型" class="headerlink" title="2. 变量与类型"></a>2. 变量与类型</h2><h3 id="2-1-什么是变量"><a href="#2-1-什么是变量" class="headerlink" title="2.1 什么是变量"></a>2.1 什么是变量</h3><p>变量就是给数据起的名字。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name &#x3D; &quot;张三&quot;
+age &#x3D; 18<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这里：</p>
+<ul>
+<li><code>name</code> 保存的是字符串</li>
+<li><code>age</code> 保存的是整数</li>
+</ul>
+<h3 id="2-2-变量没有固定类型，值有类型"><a href="#2-2-变量没有固定类型，值有类型" class="headerlink" title="2.2 变量没有固定类型，值有类型"></a>2.2 变量没有固定类型，值有类型</h3><p>Python 是动态类型语言。</p>
+<p>这表示：</p>
+<ul>
+<li>变量本身只是一个名字</li>
+<li>真正有类型的是变量指向的值</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; 10
+x &#x3D; &quot;hello&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这里 <code>x</code> 先指向整数 <code>10</code>，后面又改成指向字符串 <code>hello</code>。</p>
+<h3 id="2-3-类型的重要性"><a href="#2-3-类型的重要性" class="headerlink" title="2.3 类型的重要性"></a>2.3 类型的重要性</h3><p>当你对数据做操作时，Python 会检查类型是否匹配。</p>
+<p>例如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(1 + 2)
+print(&quot;1&quot; + &quot;2&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>第一个是数字相加，结果是 <code>3</code></li>
+<li>第二个是字符串拼接，结果是 <code>12</code></li>
+</ul>
+<p>但是如果你写：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(1 + &quot;2&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>就会报错，因为数字和字符串不能直接相加。</p>
+<hr>
+<h2 id="3-常见基础数据类型"><a href="#3-常见基础数据类型" class="headerlink" title="3. 常见基础数据类型"></a>3. 常见基础数据类型</h2><p>Python 中最常见的基础类型包括：</p>
+<ul>
+<li><code>int</code> 整数</li>
+<li><code>float</code> 浮点数</li>
+<li><code>str</code> 字符串</li>
+<li><code>bool</code> 布尔值</li>
+<li><code>NoneType</code> 空值</li>
+</ul>
+<h3 id="3-1-整数-int"><a href="#3-1-整数-int" class="headerlink" title="3.1 整数 int"></a>3.1 整数 <code>int</code></h3><p>整数是不带小数点的数字。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; 10
+b &#x3D; -5
+c &#x3D; 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>常见用途：</p>
+<ul>
+<li>年龄</li>
+<li>库存数量</li>
+<li>成绩分数</li>
+<li>次数统计</li>
+</ul>
+<h3 id="3-2-浮点数-float"><a href="#3-2-浮点数-float" class="headerlink" title="3.2 浮点数 float"></a>3.2 浮点数 <code>float</code></h3><p>浮点数是带小数点的数字。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">price &#x3D; 19.99
+height &#x3D; 1.75<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>常见用途：</p>
+<ul>
+<li>金额</li>
+<li>身高</li>
+<li>比例</li>
+<li>科学计算</li>
+</ul>
+<h3 id="3-3-字符串-str"><a href="#3-3-字符串-str" class="headerlink" title="3.3 字符串 str"></a>3.3 字符串 <code>str</code></h3><p>字符串是文本数据，必须用引号包起来。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name &#x3D; &quot;张三&quot;
+city &#x3D; &#39;北京&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>字符串可以用单引号或双引号。</p>
+<h3 id="3-4-布尔值-bool"><a href="#3-4-布尔值-bool" class="headerlink" title="3.4 布尔值 bool"></a>3.4 布尔值 <code>bool</code></h3><p>布尔值只有两个取值：</p>
+<ul>
+<li><code>True</code></li>
+<li><code>False</code></li>
+</ul>
+<p>常用于判断、条件分支、循环控制。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">is_ok &#x3D; True
+is_finished &#x3D; False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="3-5-空值-None"><a href="#3-5-空值-None" class="headerlink" title="3.5 空值 None"></a>3.5 空值 <code>None</code></h3><p><code>None</code> 表示“没有值”或者“空”。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">result &#x3D; None<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>常用于：</p>
+<ul>
+<li>变量暂时没有内容</li>
+<li>函数没有返回结果</li>
+<li>占位</li>
+</ul>
+<hr>
+<h2 id="4-容器型数据类型"><a href="#4-容器型数据类型" class="headerlink" title="4. 容器型数据类型"></a>4. 容器型数据类型</h2><p>容器类型可以装很多数据，是 Python 中非常重要的一类数据类型。</p>
+<h3 id="4-1-列表-list"><a href="#4-1-列表-list" class="headerlink" title="4.1 列表 list"></a>4.1 列表 <code>list</code></h3><p>列表是有顺序、可修改的数据集合。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fruits &#x3D; [&quot;苹果&quot;, &quot;香蕉&quot;, &quot;橙子&quot;]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>特点：</p>
+<ul>
+<li>有顺序</li>
+<li>可以重复</li>
+<li>可以修改</li>
+<li>可以存放不同类型的数据</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">data &#x3D; [1, &quot;hello&quot;, 3.5, True]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="4-2-元组-tuple"><a href="#4-2-元组-tuple" class="headerlink" title="4.2 元组 tuple"></a>4.2 元组 <code>tuple</code></h3><p>元组和列表很像，但元组不能修改。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">point &#x3D; (10, 20)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>特点：</p>
+<ul>
+<li>有顺序</li>
+<li>可以重复</li>
+<li>不能修改</li>
+</ul>
+<p>常用于：</p>
+<ul>
+<li>坐标</li>
+<li>配置信息</li>
+<li>不希望被修改的数据</li>
+</ul>
+<h3 id="4-3-字典-dict"><a href="#4-3-字典-dict" class="headerlink" title="4.3 字典 dict"></a>4.3 字典 <code>dict</code></h3><p>字典是键值对结构。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student &#x3D; &#123;
+    &quot;name&quot;: &quot;张三&quot;,
+    &quot;age&quot;: 18,
+    &quot;score&quot;: 95
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>特点：</p>
+<ul>
+<li>通过键快速找值</li>
+<li>键必须唯一</li>
+<li>值可以重复</li>
+</ul>
+<p>常用于：</p>
+<ul>
+<li>学生信息</li>
+<li>商品信息</li>
+<li>用户资料</li>
+<li>配置参数</li>
+</ul>
+<h3 id="4-4-集合-set"><a href="#4-4-集合-set" class="headerlink" title="4.4 集合 set"></a>4.4 集合 <code>set</code></h3><p>集合是无序、元素不重复的数据集合。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers &#x3D; &#123;1, 2, 3, 3, 4&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>集合会自动去重。</p>
+<p>特点：</p>
+<ul>
+<li>无序</li>
+<li>不重复</li>
+<li>支持集合运算</li>
+</ul>
+<p>常用于：</p>
+<ul>
+<li>去重</li>
+<li>成员判断</li>
+<li>数学集合操作</li>
+</ul>
+<hr>
+<h2 id="5-可变与不可变"><a href="#5-可变与不可变" class="headerlink" title="5. 可变与不可变"></a>5. 可变与不可变</h2><p>理解“可变”和“不可变”非常重要。</p>
+<h3 id="5-1-可变类型"><a href="#5-1-可变类型" class="headerlink" title="5.1 可变类型"></a>5.1 可变类型</h3><p>可变类型是指内容可以在原地修改。</p>
+<p>常见可变类型：</p>
+<ul>
+<li><code>list</code></li>
+<li><code>dict</code></li>
+<li><code>set</code></li>
+</ul>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nums &#x3D; [1, 2, 3]
+nums.append(4)
+print(nums)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>输出：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">[1, 2, 3, 4]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="5-2-不可变类型"><a href="#5-2-不可变类型" class="headerlink" title="5.2 不可变类型"></a>5.2 不可变类型</h3><p>不可变类型是指创建后内容不能直接改变。</p>
+<p>常见不可变类型：</p>
+<ul>
+<li><code>int</code></li>
+<li><code>float</code></li>
+<li><code>bool</code></li>
+<li><code>str</code></li>
+<li><code>tuple</code></li>
+</ul>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name &#x3D; &quot;hello&quot;
+new_name &#x3D; name.replace(&quot;h&quot;, &quot;H&quot;)
+print(name)
+print(new_name)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>原字符串 <code>name</code> 没有变，新字符串 <code>new_name</code> 是修改后的结果。</p>
+<h3 id="5-3-为什么要理解可变性"><a href="#5-3-为什么要理解可变性" class="headerlink" title="5.3 为什么要理解可变性"></a>5.3 为什么要理解可变性</h3><p>因为它会影响：</p>
+<ul>
+<li>函数传参时的行为</li>
+<li>数据是否会被原地改动</li>
+<li>复制和引用的理解</li>
+</ul>
+<hr>
+<h2 id="6-类型查看与类型转换"><a href="#6-类型查看与类型转换" class="headerlink" title="6. 类型查看与类型转换"></a>6. 类型查看与类型转换</h2><h3 id="6-1-查看类型-type"><a href="#6-1-查看类型-type" class="headerlink" title="6.1 查看类型 type()"></a>6.1 查看类型 <code>type()</code></h3><p>可以使用 <code>type()</code> 查看数据类型。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(type(10))
+print(type(3.14))
+print(type(&quot;hello&quot;))
+print(type([1, 2, 3]))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-2-判断类型-isinstance"><a href="#6-2-判断类型-isinstance" class="headerlink" title="6.2 判断类型 isinstance()"></a>6.2 判断类型 <code>isinstance()</code></h3><p><code>isinstance()</code> 常用于判断一个值是不是某种类型。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(isinstance(10, int))
+print(isinstance(&quot;abc&quot;, str))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>比 <code>type()</code> 更适合做类型判断。</p>
+<h3 id="6-3-类型转换"><a href="#6-3-类型转换" class="headerlink" title="6.3 类型转换"></a>6.3 类型转换</h3><p>Python 提供了很多转换函数：</p>
+<ul>
+<li><code>int()</code> 转整数</li>
+<li><code>float()</code> 转浮点数</li>
+<li><code>str()</code> 转字符串</li>
+<li><code>list()</code> 转列表</li>
+<li><code>tuple()</code> 转元组</li>
+<li><code>set()</code> 转集合</li>
+<li><code>dict()</code> 转字典</li>
+</ul>
+<h4 id="常见转换例子"><a href="#常见转换例子" class="headerlink" title="常见转换例子"></a>常见转换例子</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">print(int(&quot;123&quot;))
+print(float(&quot;3.14&quot;))
+print(str(100))
+print(list(&quot;abc&quot;))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-4-转换时的注意事项"><a href="#6-4-转换时的注意事项" class="headerlink" title="6.4 转换时的注意事项"></a>6.4 转换时的注意事项</h3><p>不是所有数据都能随便转换。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">int(&quot;abc&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这会报错，因为 <code>abc</code> 不是数字字符串。</p>
+<h4 id="小数转整数"><a href="#小数转整数" class="headerlink" title="小数转整数"></a>小数转整数</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">print(int(3.9))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>结果会变成 <code>3</code>，不是四舍五入，而是直接截断小数部分。</p>
+<hr>
+<h2 id="7-常见运算和方法"><a href="#7-常见运算和方法" class="headerlink" title="7. 常见运算和方法"></a>7. 常见运算和方法</h2><p>不同类型有不同操作。</p>
+<h3 id="7-1-数字运算"><a href="#7-1-数字运算" class="headerlink" title="7.1 数字运算"></a>7.1 数字运算</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; 10
+b &#x3D; 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a &#x2F; b)
+print(a &#x2F;&#x2F; b)
+print(a % b)
+print(a ** b)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>说明：</p>
+<ul>
+<li><code>/</code>：普通除法</li>
+<li><code>//</code>：整除</li>
+<li><code>%</code>：取余</li>
+<li><code>**</code>：幂运算</li>
+</ul>
+<h3 id="7-2-字符串常用操作"><a href="#7-2-字符串常用操作" class="headerlink" title="7.2 字符串常用操作"></a>7.2 字符串常用操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">text &#x3D; &quot;Python&quot;
+
+print(text[0])
+print(text[-1])
+print(text[0:3])
+print(text.lower())
+print(text.upper())
+print(text.replace(&quot;P&quot;, &quot;J&quot;))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>字符串常见特点：</p>
+<ul>
+<li>可以索引</li>
+<li>可以切片</li>
+<li>可以拼接</li>
+<li>有很多内置方法</li>
+</ul>
+<h3 id="7-3-列表常用操作"><a href="#7-3-列表常用操作" class="headerlink" title="7.3 列表常用操作"></a>7.3 列表常用操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">items &#x3D; [1, 2, 3]
+items.append(4)
+items.insert(1, 99)
+items.remove(2)
+print(items)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>常见列表方法：</p>
+<ul>
+<li><code>append()</code> 追加</li>
+<li><code>insert()</code> 插入</li>
+<li><code>remove()</code> 删除</li>
+<li><code>pop()</code> 弹出</li>
+<li><code>sort()</code> 排序</li>
+<li><code>reverse()</code> 反转</li>
+</ul>
+<h3 id="7-4-字典常用操作"><a href="#7-4-字典常用操作" class="headerlink" title="7.4 字典常用操作"></a>7.4 字典常用操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">student &#x3D; &#123;&quot;name&quot;: &quot;张三&quot;, &quot;age&quot;: 18&#125;
+
+print(student[&quot;name&quot;])
+student[&quot;score&quot;] &#x3D; 95
+print(student.get(&quot;age&quot;))
+print(student.keys())
+print(student.values())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>常见字典操作：</p>
+<ul>
+<li>通过键取值</li>
+<li>添加新键值对</li>
+<li><code>get()</code> 安全取值</li>
+<li><code>keys()</code> 查看所有键</li>
+<li><code>values()</code> 查看所有值</li>
+</ul>
+<h3 id="7-5-集合常用操作"><a href="#7-5-集合常用操作" class="headerlink" title="7.5 集合常用操作"></a>7.5 集合常用操作</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">s &#x3D; &#123;1, 2, 3&#125;
+s.add(4)
+s.remove(2)
+print(s)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>集合常用于去重和判断元素是否存在。</p>
+<hr>
+<h2 id="8-数据类型的实际使用场景"><a href="#8-数据类型的实际使用场景" class="headerlink" title="8. 数据类型的实际使用场景"></a>8. 数据类型的实际使用场景</h2><p>理解类型不仅仅是记名字，更重要的是知道什么时候用。</p>
+<h3 id="8-1-int"><a href="#8-1-int" class="headerlink" title="8.1 int"></a>8.1 <code>int</code></h3><p>适合：</p>
+<ul>
+<li>年龄</li>
+<li>库存</li>
+<li>排名</li>
+<li>次数</li>
+</ul>
+<h3 id="8-2-float"><a href="#8-2-float" class="headerlink" title="8.2 float"></a>8.2 <code>float</code></h3><p>适合：</p>
+<ul>
+<li>金额</li>
+<li>单价</li>
+<li>比例</li>
+<li>科学数据</li>
+</ul>
+<h3 id="8-3-str"><a href="#8-3-str" class="headerlink" title="8.3 str"></a>8.3 <code>str</code></h3><p>适合：</p>
+<ul>
+<li>姓名</li>
+<li>地址</li>
+<li>编号</li>
+<li>说明文字</li>
+</ul>
+<h3 id="8-4-list"><a href="#8-4-list" class="headerlink" title="8.4 list"></a>8.4 <code>list</code></h3><p>适合：</p>
+<ul>
+<li>多个学生</li>
+<li>多个商品</li>
+<li>多个成绩</li>
+<li>有顺序的数据</li>
+</ul>
+<h3 id="8-5-dict"><a href="#8-5-dict" class="headerlink" title="8.5 dict"></a>8.5 <code>dict</code></h3><p>适合：</p>
+<ul>
+<li>一个对象的完整信息</li>
+<li>键值对结构</li>
+<li>通过名字快速查找</li>
+</ul>
+<h3 id="8-6-set"><a href="#8-6-set" class="headerlink" title="8.6 set"></a>8.6 <code>set</code></h3><p>适合：</p>
+<ul>
+<li>去重</li>
+<li>标签集合</li>
+<li>成员判断</li>
+</ul>
+<h3 id="8-7-tuple"><a href="#8-7-tuple" class="headerlink" title="8.7 tuple"></a>8.7 <code>tuple</code></h3><p>适合：</p>
+<ul>
+<li>不想被改动的坐标</li>
+<li>常量式数据</li>
+</ul>
+<hr>
+<h2 id="9-常见错误与排查"><a href="#9-常见错误与排查" class="headerlink" title="9. 常见错误与排查"></a>9. 常见错误与排查</h2><h3 id="9-1-字符串和数字混用"><a href="#9-1-字符串和数字混用" class="headerlink" title="9.1 字符串和数字混用"></a>9.1 字符串和数字混用</h3><p>错误：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(&quot;1&quot; + 2)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>原因：字符串和整数不能直接相加。</p>
+<p>正确：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(str(1) + &quot;2&quot;)
+print(1 + int(&quot;2&quot;))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="9-2-下标越界"><a href="#9-2-下标越界" class="headerlink" title="9.2 下标越界"></a>9.2 下标越界</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">items &#x3D; [1, 2, 3]
+print(items[5])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>原因：列表没有那么多元素。</p>
+<h3 id="9-3-修改了不该改的数据"><a href="#9-3-修改了不该改的数据" class="headerlink" title="9.3 修改了不该改的数据"></a>9.3 修改了不该改的数据</h3><p>例如把元组当成列表修改：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">point &#x3D; (1, 2)
+point[0] &#x3D; 10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>元组不可修改，会报错。</p>
+<h3 id="9-4-键不存在"><a href="#9-4-键不存在" class="headerlink" title="9.4 键不存在"></a>9.4 键不存在</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">student &#x3D; &#123;&quot;name&quot;: &quot;张三&quot;&#125;
+print(student[&quot;age&quot;])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如果键不存在，直接访问会报错。可以用：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(student.get(&quot;age&quot;))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="9-5-误以为集合有顺序"><a href="#9-5-误以为集合有顺序" class="headerlink" title="9.5 误以为集合有顺序"></a>9.5 误以为集合有顺序</h3><p>集合是无序的，不要依赖它的顺序。</p>
+<hr>
+<h2 id="10-学习检查清单"><a href="#10-学习检查清单" class="headerlink" title="10. 学习检查清单"></a>10. 学习检查清单</h2><p>学完数据类型后，建议你检查自己是否能回答这些问题：</p>
+<ul>
+<li>我知道变量和类型的区别吗</li>
+<li>我知道 <code>int</code>、<code>float</code>、<code>str</code>、<code>bool</code>、<code>None</code> 的用途吗</li>
+<li>我知道 <code>list</code>、<code>tuple</code>、<code>dict</code>、<code>set</code> 的区别吗</li>
+<li>我知道可变和不可变的区别吗</li>
+<li>我会用 <code>type()</code> 和 <code>isinstance()</code> 吗</li>
+<li>我会进行类型转换吗</li>
+<li>我知道不同数据类型适合什么场景吗</li>
+<li>我能看懂常见报错并知道原因吗</li>
+</ul>
+<hr>
+<h2 id="11-快速记忆版"><a href="#11-快速记忆版" class="headerlink" title="11. 快速记忆版"></a>11. 快速记忆版</h2><p>如果你只想快速复习，记住下面这些就够用了：</p>
+<ul>
+<li><code>int</code>：整数</li>
+<li><code>float</code>：小数</li>
+<li><code>str</code>：字符串</li>
+<li><code>bool</code>：真假</li>
+<li><code>None</code>：空值</li>
+<li><code>list</code>：可变有序列表</li>
+<li><code>tuple</code>：不可变有序元组</li>
+<li><code>dict</code>：键值对字典</li>
+<li><code>set</code>：无序不重复集合</li>
+<li><code>type()</code>：看类型</li>
+<li><code>isinstance()</code>：判断类型</li>
+<li><code>int()</code>、<code>float()</code>、<code>str()</code>：类型转换</li>
+<li>可变类型：<code>list</code>、<code>dict</code>、<code>set</code></li>
+<li>不可变类型：<code>int</code>、<code>float</code>、<code>str</code>、<code>tuple</code>、<code>bool</code></li>
+</ul>
+<hr>
+<h2 id="12-练习建议"><a href="#12-练习建议" class="headerlink" title="12. 练习建议"></a>12. 练习建议</h2><p>你可以按下面步骤练习：</p>
+<ol>
+<li>分别定义一个整数、浮点数、字符串、布尔值和空值</li>
+<li>创建一个列表，尝试添加、删除、修改元素</li>
+<li>创建一个字典，练习键值访问和添加新字段</li>
+<li>创建一个集合，看看重复元素会发生什么</li>
+<li>把字符串、数字、列表之间进行相互转换</li>
+<li>用 <code>type()</code> 输出不同数据的类型</li>
+</ol>
+<h3 id="推荐小练习"><a href="#推荐小练习" class="headerlink" title="推荐小练习"></a>推荐小练习</h3><ul>
+<li>设计一个“学生成绩记录”字典</li>
+<li>设计一个“购物车商品列表”</li>
+<li>设计一个“去重后的编号集合”</li>
+<li>设计一个“价格计算程序”</li>
+</ul>
+<hr>
+<h2 id="13-总结"><a href="#13-总结" class="headerlink" title="13. 总结"></a>13. 总结</h2><p>Python 的数据类型是编程最基础、也是最重要的知识之一。</p>
+<p>你一定要记住：</p>
+<ul>
+<li>先分清类型，再写操作</li>
+<li>先分清可变和不可变，再考虑修改方式</li>
+<li>先分清容器类型的特点，再决定用哪一种</li>
+</ul>
+<p>只要你真正理解了数据类型，后面的条件判断、循环、函数、类和对象都会更容易学。</p>
 
                 
             </div>
@@ -456,7 +840,7 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/</a>
+                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,13 +925,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                <a href="/uncategorized/%E5%B7%A5%E5%85%B7/matlab/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%BB%BA%E6%A8%A1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python与数据分析">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="控制系统建模">
                         
-                        <span class="card-title">Python与数据分析</span>
+                        <span class="card-title">控制系统建模</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -558,16 +942,12 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-28
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            phoox
                             
                         </span>
                     </div>
@@ -582,13 +962,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Linux/%E5%B7%A5%E5%85%B7/LInux/Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                <a href="/%E5%B7%A5%E5%85%B7/python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E7%B1%BB%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基础知识">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Python类与对象">
                         
-                        <span class="card-title">基础知识</span>
+                        <span class="card-title">Python类与对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -599,14 +979,18 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/python/" class="post-category">
+                                    python
                                 </a>
                             
                             

@@ -4,12 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="matlab, Phoox">
-    <meta name="description" content="matlab数值计算变量、常量、字符串变量 第一次出现时定义常量 预先定义的变量字符串 字符的集合
-矩阵矩阵的生成&amp;amp;lt;html&amp;gt; 
-  &amp;amp;lt;head&amp;gt; 
-  &amp;amp;lt;/head&amp;gt;
-&amp;amp;">
+    <meta name="keywords" content="Phoox">
+    <meta name="description" content="常微分方程初值问题问题描述已知
+
+\begin{cases}
+y^{&#39;}=f(x,y)\\
+y(x_0)=y_0
+\end{cases}绕过公式求出任意时刻的输出$y$
+欧拉法对式子两边同时进行积分
+
+y(x_{n+1})-y(x_n)=\">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>matlab | Phoox</title>
+    <title>Phoox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +341,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">matlab</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -371,19 +375,6 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
-                            </a>
-                        
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/matlab/" class="post-category">
-                                matlab
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
@@ -391,7 +382,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-08
+                    2026-05-20
                 </div>
                 
 
@@ -415,22 +406,69 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="matlab数值计算"><a href="#matlab数值计算" class="headerlink" title="matlab数值计算"></a>matlab数值计算</h2><h4 id="变量、常量、字符串"><a href="#变量、常量、字符串" class="headerlink" title="变量、常量、字符串"></a>变量、常量、字符串</h4><p>变量 第一次出现时定义<br>常量 预先定义的变量<br>字符串 字符的集合</p>
-<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="矩阵的生成"><a href="#矩阵的生成" class="headerlink" title="矩阵的生成"></a>矩阵的生成</h4><pre><code>&amp;lt;html&gt; 
-  &amp;lt;head&gt; 
-  &amp;lt;/head&gt;
-&amp;lt;/html&gt;
-</code></pre><pre class="line-numbers language-none"><code class="language-none">a&#x3D;[1 2 3;4 5 6]
-c&#x3D;[a,b]
-m&#x3D;[1:2:10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h5 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h5><p>单位矩阵  eye(m,n)<br>零矩阵   zeros(m,n)<br>一矩阵    ones(m,n)<br>对角阵   对角元素向量=[a1.a2,a3]  A=diag(v)<br>随机矩阵  rand(m,n)</p>
-<h4 id="矩阵操作"><a href="#矩阵操作" class="headerlink" title="矩阵操作"></a>矩阵操作</h4><p>下标<br>A(m,n)<br>A(:,n)  提取第n列<br>A(m,:)  提取第m行<br>A‘      转秩<br>inv(A)  求逆<br>det(A)  求行列式<br>A\b     A<em>x=b<br>A/b     x</em>b=A</p>
-<h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><h4 id="多项式表示"><a href="#多项式表示" class="headerlink" title="多项式表示"></a>多项式表示</h4><h2 id="matlab符号运算"><a href="#matlab符号运算" class="headerlink" title="matlab符号运算"></a>matlab符号运算</h2><p>符号运算无需先对变量赋值</p>
-<h2 id="matlab程序设计"><a href="#matlab程序设计" class="headerlink" title="matlab程序设计"></a>matlab程序设计</h2><p>find()方法<br><pre class="line-numbers language-none"><code class="language-none">find(x)         #返回x中不等于0的元素的下标
-find(0&lt;x&amp;x&lt;10)  #返回x中大于0小于10的元素的下标<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<p>root()方法<br><pre class="line-numbers language-none"><code class="language-none">p&#x3D;[1 -6 -72 -27]
-r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-
+                <h2 id="常微分方程初值问题"><a href="#常微分方程初值问题" class="headerlink" title="常微分方程初值问题"></a>常微分方程初值问题</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>已知</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+y^{'}=f(x,y)\\
+y(x_0)=y_0
+\end{cases}</script><p>绕过公式求出任意时刻的输出$y$</p>
+<h3 id="欧拉法"><a href="#欧拉法" class="headerlink" title="欧拉法"></a>欧拉法</h3><p>对式子两边同时进行积分</p>
+<script type="math/tex; mode=display">
+y(x_{n+1})-y(x_n)=\int_{x_n}^{x_{n+1}}f(x,y)dt</script><p>根据对右边积分不同的处理办法得到不同的计算方法</p>
+<ul>
+<li><p>前进欧拉法<br>用左矩形公式$hf(x<em>n,y(x_n))$近似右侧的积分，$y</em>{n+1}$代替$y(x_{n+1})$,  $y_n$代替$y(x_n)$   有  </p>
+<script type="math/tex; mode=display">y_{n+1}=y_n+hf(x_n,y_n)</script></li>
+<li><p>后退欧拉法<br>用右矩形公式$hf(x<em>{n+1},y(x</em>{n+1}))$近似右侧积分 称为后退欧拉法。</p>
+<script type="math/tex; mode=display">y_{n+1}=y_n+hf(x_{n+1},y_{n+1})</script><p>不同于前进欧拉法，此时式子是关于$y_{n+1}$的方程，是隐式的，需要用迭代法来求解。</p>
+<script type="math/tex; mode=display">y_{n+1}^0=y_n+hf(x_{n+1},y_{n+1})\\
+y_{n+1}^1=y_n+hf(x_{n+1},y^0_{n+1})</script></li>
+<li>梯形方法<br>用梯形求积公式近似右侧积分，称为梯形方法  <script type="math/tex; mode=display">y_{n+1}=y_n+\frac{h}{2}[f(x_n,y(x_n))+f(x_{n+1},y_{n+1})]</script>为了避免迭代，采用改进后的梯形方法<script type="math/tex; mode=display">\begin{align}
+&预测公式：\bar{y_{n+1}}=y_n+hf(x_n,y_n)\\
+&校正公式：y_{n+1}=y_n+\frac{h}{2}[f(x_n,y(x_n))+f(x_{n+1},\bar{y_{n+1})}]\end{align}</script><h3 id="龙格库塔法"><a href="#龙格库塔法" class="headerlink" title="龙格库塔法"></a>龙格库塔法</h3><h4 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4>对$\int<em>{x_n}^{x</em>{n+1}}f(x,y)dx$积分求解，若能在$[x<em>n,x</em>{n+1}]中选取多个点进行加权平均，则可以用更高精度来逼近积分$<script type="math/tex; mode=display">\int_{x_n}^{x_{n+1}}f(x,y)dx=h\sum_{i=1}^rc_if(x_n+\lambda_ih,y(x_n+\lambda_ih))</script></li>
+</ul>
+<h4 id="二阶显式R-K方法"><a href="#二阶显式R-K方法" class="headerlink" title="二阶显式R-K方法"></a>二阶显式R-K方法</h4><script type="math/tex; mode=display">
+\begin{cases}
+y_{n+1}=y_n+h(c_1K_!+c_2K_2)\\
+K_1=f(x_n,y_n)\\
+K_2=f(x_n+\frac{h}{2}h,y_n+\frac{h}{2}K_1)
+\end{cases}</script><h4 id="四阶显式R-K方法"><a href="#四阶显式R-K方法" class="headerlink" title="四阶显式R-K方法"></a>四阶显式R-K方法</h4><script type="math/tex; mode=display">
+\begin{cases}
+y_{n+1}=y_n+\frac{h}{6}(K_1+2K_2+2K_3+K_4)\\
+K_1=f(x_n,y_n)\\
+K_2=f(x_n+\frac{h}{2},y_n+\frac{h}{2}K_1)\\
+K_3=f(x_n+\frac{h}{2},y_n+\frac{h}{2}+\frac{h}{2}K_2)\\
+K_4=f(X_n+h,y_n+hK_3)
+\end{cases}</script><h5 id="一阶微分方程组"><a href="#一阶微分方程组" class="headerlink" title="一阶微分方程组"></a>一阶微分方程组</h5><script type="math/tex; mode=display">
+\begin{cases}
+y^{'}=f(x,y,z)\\
+z^{'}=g(x,y,z)\\
+y(x_0)=y_0\\
+z(x_0)=z_0
+\end{cases}</script><p>此时龙格-库塔公式为</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+y_{n+1}=y_n+\frac{h}{6}(K_1+2K_2+2K_3+K_4)\\
+z_{n+1}=z_n+\frac{h}{6}(L_1+2L_2+2L_3+L_4)
+\end{cases}</script><p>其中</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+K_1&=f(x_n,y_n,z_n)\\
+L_1&=g(x_n,y_n,z_n)\\
+K_2&=f(x_n+\frac{h}{2},y_n+\frac{h}{2}K_1,z_n+\frac{h}{2}L_1)\\
+L_2&=g(x_n+\frac{h}{2},y_n+\frac{h}{2}K_1,z_n+\frac{h}{2}L_1)\\
+K_3&=f(x_n+\frac{h}{2},y_n+\frac{h}{2}+\frac{h}{2}K_2+z_n+\frac{h}{2}L_2)\\
+L_3&=g(x_n+\frac{h}{2},y_n+\frac{h}{2}+\frac{h}{2}K_2+z_n+\frac{h}{2}L_2)\\
+K_4&=f(x_n+h,y_n+hK_3,z_n+hL_3)\\
+L_4&=g(x_n+h,y_n+hK_3,z_n+hL_3)
+\end{cases}</script><h5 id="高阶方程化为一阶方程组"><a href="#高阶方程化为一阶方程组" class="headerlink" title="高阶方程化为一阶方程组"></a>高阶方程化为一阶方程组</h5><p>m阶微分方程$y^{(m)}=f(x,y,y^{‘},…,y^{(m-1)})$,已知初始条件为$y(x_0)=y_0,y^{‘}(x_0)=y_0^{‘}, …y^{(m-1)}(x_0)=y^{m-1}$<br>引进新变量$y_1=y,y_2=y^{‘},…,y_m=y^{m-1}$<br>则m阶微风方程可化为如下一阶方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+y_1^{'}=y_2\\
+y_2^{'}=y_3\\
+...\\
+y_{m-1}^{'}=y_m\\
+y_m^{'}=f(x,y_1,y_2,...,y_m)
+\end{cases}</script>
                 
             </div>
             <hr/>
@@ -456,7 +494,7 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/</a>
+                    <a href="https://cdsee045.github.io/uncategorized/%E7%90%86%E8%AE%BA/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">https://cdsee045.github.io/uncategorized/%E7%90%86%E8%AE%BA/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,13 +579,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                <a href="/uncategorized/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A7%E5%88%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python与数据分析">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="计算机控制">
                         
-                        <span class="card-title">Python与数据分析</span>
+                        <span class="card-title">计算机控制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -558,16 +596,12 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-26
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            phoox
                             
                         </span>
                     </div>
@@ -582,13 +616,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Linux/%E5%B7%A5%E5%85%B7/LInux/Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                <a href="/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%8E%B0%E4%BB%A3%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基础知识">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="第二部分 现代控制理论">
                         
-                        <span class="card-title">基础知识</span>
+                        <span class="card-title">第二部分 现代控制理论</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -599,14 +633,14 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/" class="post-category">
+                                    -控制理论
                                 </a>
                             
                             

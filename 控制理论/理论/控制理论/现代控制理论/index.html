@@ -4,12 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="matlab, Phoox">
-    <meta name="description" content="matlab数值计算变量、常量、字符串变量 第一次出现时定义常量 预先定义的变量字符串 字符的集合
-矩阵矩阵的生成&amp;amp;lt;html&amp;gt; 
-  &amp;amp;lt;head&amp;gt; 
-  &amp;amp;lt;/head&amp;gt;
-&amp;amp;">
+    <meta name="keywords" content="第二部分 现代控制理论, Phoox">
+    <meta name="description" content="状态空间表达式状态变量状态变量是表征系统运动状态的最小个数的一组变量，即给定状态变量初值$x(t_0)$及$t\gt t_0$时刻的输入$u(t)$,就可以完全确定系统在$t\gt t_0$时刻的动态行为状态变量的特点  
+
+状态变量是相互">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>matlab | Phoox</title>
+    <title>第二部分 现代控制理论 | Phoox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +335,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">matlab</h1>
+                    <h1 class="description center-align post-title">第二部分 现代控制理论</h1>
                 </div>
             </div>
         </div>
@@ -374,12 +372,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
-                            </a>
-                        
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/matlab/" class="post-category">
-                                matlab
+                            <a href="/categories/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/" class="post-category">
+                                -控制理论
                             </a>
                         
                     </div>
@@ -391,7 +385,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-08
+                    2026-05-19
                 </div>
                 
 
@@ -415,22 +409,100 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="matlab数值计算"><a href="#matlab数值计算" class="headerlink" title="matlab数值计算"></a>matlab数值计算</h2><h4 id="变量、常量、字符串"><a href="#变量、常量、字符串" class="headerlink" title="变量、常量、字符串"></a>变量、常量、字符串</h4><p>变量 第一次出现时定义<br>常量 预先定义的变量<br>字符串 字符的集合</p>
-<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="矩阵的生成"><a href="#矩阵的生成" class="headerlink" title="矩阵的生成"></a>矩阵的生成</h4><pre><code>&amp;lt;html&gt; 
-  &amp;lt;head&gt; 
-  &amp;lt;/head&gt;
-&amp;lt;/html&gt;
-</code></pre><pre class="line-numbers language-none"><code class="language-none">a&#x3D;[1 2 3;4 5 6]
-c&#x3D;[a,b]
-m&#x3D;[1:2:10]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h5 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h5><p>单位矩阵  eye(m,n)<br>零矩阵   zeros(m,n)<br>一矩阵    ones(m,n)<br>对角阵   对角元素向量=[a1.a2,a3]  A=diag(v)<br>随机矩阵  rand(m,n)</p>
-<h4 id="矩阵操作"><a href="#矩阵操作" class="headerlink" title="矩阵操作"></a>矩阵操作</h4><p>下标<br>A(m,n)<br>A(:,n)  提取第n列<br>A(m,:)  提取第m行<br>A‘      转秩<br>inv(A)  求逆<br>det(A)  求行列式<br>A\b     A<em>x=b<br>A/b     x</em>b=A</p>
-<h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><h4 id="多项式表示"><a href="#多项式表示" class="headerlink" title="多项式表示"></a>多项式表示</h4><h2 id="matlab符号运算"><a href="#matlab符号运算" class="headerlink" title="matlab符号运算"></a>matlab符号运算</h2><p>符号运算无需先对变量赋值</p>
-<h2 id="matlab程序设计"><a href="#matlab程序设计" class="headerlink" title="matlab程序设计"></a>matlab程序设计</h2><p>find()方法<br><pre class="line-numbers language-none"><code class="language-none">find(x)         #返回x中不等于0的元素的下标
-find(0&lt;x&amp;x&lt;10)  #返回x中大于0小于10的元素的下标<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<p>root()方法<br><pre class="line-numbers language-none"><code class="language-none">p&#x3D;[1 -6 -72 -27]
-r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-
+                <h2 id="状态空间表达式"><a href="#状态空间表达式" class="headerlink" title="状态空间表达式"></a>状态空间表达式</h2><h3 id="状态变量"><a href="#状态变量" class="headerlink" title="状态变量"></a>状态变量</h3><p>状态变量是表征系统运动状态的最小个数的一组变量，即给定状态变量初值$x(t_0)$及$t\gt t_0$时刻的输入$u(t)$,就可以完全确定系统在$t\gt t_0$时刻的动态行为<br>状态变量的特点  </p>
+<ul>
+<li>状态变量是相互独立(线性无关的)</li>
+<li>状态变量的个数等于系统独立储能元件的个数</li>
+<li>状态变量的选取不唯一  </li>
+</ul>
+<p>状态变量按列向量排列构成状态向量 $\iff$ 自动控制理论的传递函数</p>
+<h3 id="状态方程"><a href="#状态方程" class="headerlink" title="状态方程"></a>状态方程</h3><p>由系统状态变量构成的描述系统动态过程的一阶微分方程称为状态方程<br><strong>表征状态与输入之间的关系</strong><br>形式为 <script type="math/tex">\dot{x(t)}=Ax(t)+Bu(t)</script></p>
+<h3 id="输出方程"><a href="#输出方程" class="headerlink" title="输出方程"></a>输出方程</h3><p>在指定系统输出$y$的情况下，输出$y$向量与状态变量$x$及输入变量$u$的函数关系式<br><strong>表征状态与输出的关系</strong><br>形式为 <script type="math/tex">y(t)=Cx(t)+Du(t)</script></p>
+<h3 id="状态空间表达式-1"><a href="#状态空间表达式-1" class="headerlink" title="状态空间表达式"></a>状态空间表达式</h3><p>将状态方程和输出方程总和起来，构成对一个系统的完整动态描述称为系统的状态空间表达式<br>形式 <script type="math/tex">\dot{x(t)}=Ax(t)+Bu(t)</script> <script type="math/tex">y(t)=Cx(t)+Du(t)</script><br>其中：</p>
+<ul>
+<li>$x\in R^n$ 状态向量</li>
+<li>$u\in R^r$ 输入向量</li>
+<li>$y\in R^m$ 输出向量</li>
+<li>$A\in R^{n\times n}$ 系统矩阵 表征系统内部状态的联系</li>
+<li>$B\in R^{n\times r}$ 控制矩阵 表征系统输入对状态的作用</li>
+<li>$C\in R^{m\times n}$ 输出矩阵 表征输出与状态变量的关系</li>
+<li>$D\in R^{m\times r}$ 传输矩阵 表征输出与输入的关系</li>
+</ul>
+<h3 id="实现问题"><a href="#实现问题" class="headerlink" title="实现问题"></a>实现问题</h3><p>由输入输出描述(控制系统的外部描述)确定状态空间描述(控制系统的内部描述)的问题称为实现问题<br>设 $m\lt n$  </p>
+<script type="math/tex; mode=display">Y(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+...+b_1s+b_0}{s^n+a_{n-1}s^{n-1}+...+a_1s+a_0} U(s)</script><p>引入中间变量$Y_1(S)$ </p>
+<script type="math/tex; mode=display">Y_1(s)=\frac{1}{s^n+a_{n-1}s^{n-1}+...+a_1s+a_0}U(s)</script><p>有 </p>
+<script type="math/tex; mode=display">Y(s)=Y_1(s)[b_ms^m+b_{m-1}s^{m-1}+...+b_1s+b_0]</script><script type="math/tex; mode=display">Y_1(s)[s^n+a_{n-1}s^{n-1}+...+a_1s+a_0]=U(s)</script><p>做拉氏反变换有 </p>
+<script type="math/tex; mode=display">y(t)=b_my_1^{(m)}+b_{m-1}y_1^{(m-1)}+...+b_1y_1'+b_0y_1</script><script type="math/tex; mode=display">y_1^{(n)}+a_{n-1}y_1^{(n-1)}+...a_1y_1'+a_0y_1=u</script><p>选取状态变量$ x_1=y_1 ,x_2=y_1’,…,x_n=y_1^{(n-1)}$<br>得状态方程  </p>
+<script type="math/tex; mode=display">\dot{x_1}=x_2\\\dot{x_2}=x_3\\...\\ \dot{x_{n-1}}=x_n</script><script type="math/tex; mode=display">\dot{x_n}=-a_{n-1}x_n-a_{n-2}x_{n-1}-...-a_1x_2-a_0x_1+u</script><p>输出方程</p>
+<script type="math/tex; mode=display">y=b_mx_{m+1}+b_{m_1}x_{m}+...+b_1x_2+b_0x_1</script><script type="math/tex; mode=display">
+\begin{bmatrix}
+\dot{x_1}\\ \dot{x_2}\\ ...\\ \dot{x_n}
+\end{bmatrix}
+= \begin{bmatrix}
+0&1&0&...&0\\
+0&0&1&...&0\\
+...&...&...&...&0\\
+0&0&0&...&1\\
+-a_0&-a_1&-a_2&...&-a_{n-1}
+\end{bmatrix}
+\begin{bmatrix}
+    x_1\\x_2\\x_3\\...\\x_n
+\end{bmatrix}
++\begin{bmatrix}
+    0\\0\\0\\...\\1
+\end{bmatrix}u</script><p>上述形式被称为能控标准一型</p>
+<p>状态空间表达式不唯一，特征值唯一</p>
+<h2 id="状态空间表达式的规范型-相似对角化"><a href="#状态空间表达式的规范型-相似对角化" class="headerlink" title="状态空间表达式的规范型(相似对角化)"></a>状态空间表达式的规范型(相似对角化)</h2><h3 id="对角规范型"><a href="#对角规范型" class="headerlink" title="对角规范型"></a>对角规范型</h3><ul>
+<li>特征值两两互异<br>系统$\dot{x}=Ax+Bu$，设其特征值两两互异，由特征向量组成的变换阵<br>$T=\begin{bmatrix}P_1&amp;P_2&amp;…&amp; P_n\end{bmatrix}$<br>状态方程在$Z=T^{-1}x$变换下可化为如下对角型  <script type="math/tex; mode=display">\dot{Z}=\begin{bmatrix}\lambda_1&0&0&...&0\\ 0&\lambda_2&0&...&0\\ 0&0&\lambda_3&...&0\\...&...&...&...&0\\ 0&0&0&...&\lambda_n\end{bmatrix}z+T^{-1}Bu</script></li>
+</ul>
+<p>在对角规范型下，个状态变量实现了解耦</p>
+<h3 id="约旦规范型"><a href="#约旦规范型" class="headerlink" title="约旦规范型"></a>约旦规范型</h3><ul>
+<li>特征值存在重根  <script type="math/tex; mode=display">A_J=\begin{bmatrix}J_1&0&0&...&0\\ 0&J_2&0&...&0\\ 0&0&J_3&...&0\\ ...&...&...&...&...\\ 0&0&0&...&J_K\end{bmatrix}</script>其中每个约旦块<script type="math/tex; mode=display">J_i=\begin{bmatrix}\lambda_i&1&0&...&0\\0&\lambda_i&1&...&0\\0&0&\lambda_i&...&0\\...&...&...&...&1\\0&0&0&...&\lambda_i\end{bmatrix}</script></li>
+</ul>
+<h3 id="传递函数和状态空间表达式的联系"><a href="#传递函数和状态空间表达式的联系" class="headerlink" title="传递函数和状态空间表达式的联系"></a>传递函数和状态空间表达式的联系</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">经典理论</td>
+<td style="text-align:center">传递函数</td>
+<td style="text-align:center">特征多项式</td>
+<td style="text-align:center">极点</td>
+</tr>
+<tr>
+<td style="text-align:center">现代理论</td>
+<td style="text-align:center">状态向量</td>
+<td style="text-align:center">系统矩阵</td>
+<td style="text-align:center">特征值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>由状态空间表达式求传递函数阵 只需消去中间变量x</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\dot{x}=Ax+Bu\\
+y=Cx+Du
+\end{cases}</script><p>取拉氏变换后</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+sX(s)=AX(s)+BU(s)\\
+Y(s)=CX(s)+DU(s)
+\end{cases}
+\rightarrow
+\begin{cases}
+X(s)=(sI-A)^{-1}BU(s)\\
+Y(s)=(C(sI-A)^{-1}B+D)U(s)
+\end{cases}</script><p>故<script type="math/tex">G(s)=C(sI-A)^{-1}B+D</script></p>
+<h2 id="状态空间表达式的解"><a href="#状态空间表达式的解" class="headerlink" title="状态空间表达式的解"></a>状态空间表达式的解</h2><p>对线性定常系统，已知$\dot x=Ax+Bu,x(0)=x_0,t\ge0$<br>则</p>
+<script type="math/tex; mode=display">x(t)=e^{At}x_0+\int_0^t\Phi(t-\tau)Bu(\tau)d\tau</script>
                 
             </div>
             <hr/>
@@ -456,7 +528,7 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/matlab/%E5%B7%A5%E5%85%B7/matlab/matlab/</a>
+                    <a href="https://cdsee045.github.io/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%8E%B0%E4%BB%A3%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">https://cdsee045.github.io/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%8E%B0%E4%BB%A3%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,13 +613,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/%E5%B7%A5%E5%85%B7/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                <a href="/uncategorized/%E7%90%86%E8%AE%BA/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python与数据分析">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Python与数据分析</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -558,16 +630,12 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-20
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            phoox
                             
                         </span>
                     </div>
@@ -582,13 +650,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Linux/%E5%B7%A5%E5%85%B7/LInux/Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                <a href="/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基础知识">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="前言：数学基础">
                         
-                        <span class="card-title">基础知识</span>
+                        <span class="card-title">前言：数学基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -599,14 +667,14 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/" class="post-category">
+                                    -控制理论
                                 </a>
                             
                             
@@ -733,6 +801,13 @@ r&#x3D;roots(p)       #返回由p向量构成多项式方程的根<span aria-hid
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
