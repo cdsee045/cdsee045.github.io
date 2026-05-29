@@ -5,9 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="第一部分：自动控制理论, Phoox">
-    <meta name="description" content="基本组成传递函数定义在零初始条件下，线性定常系统(LTI) 输出量拉氏变换与输入量拉氏变换之比
-G(s)=\frac{Y(s)}{U(s)}标准形式对n阶微分方程
-a_ny^{(n)}+a_{n-1}y^{(n-1)}+...+a_0y=b">
+    <meta name="description" content="1.控制系统的组成
+2.控制系统的数学模型2.1传递函数在零初始条件下，线性定常系统(LTI) 输出量拉氏变换与输入量拉氏变换之比
+G(s)=\frac{Y(s)}{U(s)}2.1.1标准形式对n阶微分方程
+a_ny^{(n)}+a_{n">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -409,18 +410,100 @@ a_ny^{(n)}+a_{n-1}y^{(n-1)}+...+a_0y=b">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="基本组成"><a href="#基本组成" class="headerlink" title="基本组成"></a>基本组成</h2><h2 id="传递函数"><a href="#传递函数" class="headerlink" title="传递函数"></a>传递函数</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>在<strong>零初始条件下</strong>，<strong>线性定常系统(LTI)</strong> 输出量拉氏变换与输入量拉氏变换之比</p>
-<script type="math/tex; mode=display">G(s)=\frac{Y(s)}{U(s)}</script><h3 id="标准形式"><a href="#标准形式" class="headerlink" title="标准形式"></a>标准形式</h3><p>对n阶微分方程</p>
+                <h1 id="1-控制系统的组成"><a href="#1-控制系统的组成" class="headerlink" title="1.控制系统的组成"></a>1.控制系统的组成</h1><hr>
+<h1 id="2-控制系统的数学模型"><a href="#2-控制系统的数学模型" class="headerlink" title="2.控制系统的数学模型"></a>2.控制系统的数学模型</h1><h2 id="2-1传递函数"><a href="#2-1传递函数" class="headerlink" title="2.1传递函数"></a>2.1传递函数</h2><p>在<strong>零初始条件下</strong>，<strong>线性定常系统(LTI)</strong> 输出量拉氏变换与输入量拉氏变换之比</p>
+<script type="math/tex; mode=display">G(s)=\frac{Y(s)}{U(s)}</script><h3 id="2-1-1标准形式"><a href="#2-1-1标准形式" class="headerlink" title="2.1.1标准形式"></a>2.1.1标准形式</h3><p>对n阶微分方程</p>
 <script type="math/tex; mode=display">a_ny^{(n)}+a_{n-1}y^{(n-1)}+...+a_0y=b_mu^{(m)}+b_{m-1}u^{(m-1)}+...+b_0u</script><p>两边同取拉氏变换后有</p>
 <script type="math/tex; mode=display">[a_ns^n+a_{n-1}s^{n-1}+...+a_0]Y(s)=[b_ms^m+b_{m-1}s^{m-1}+...+b_0]U(s)</script><p>故<script type="math/tex">G(s)=\frac{Y(S)}{U(S)}=\frac{b_ms^m+b_{m-1}s^{m-1}+...+b_0}{a_ns^n+a_{n-1}s^{n-1}+...+a_0}</script><br>首一标准型 $G(s)=\frac{k^*\prod(s-z)}{\prod(s-p)}$  用来画根轨迹<br>尾一标准型 $G(s)=\frac{k\prod(T_ks+1)}{\prod(T_is+1)}$ 用来分析系统性能 可以直接得到开环增益和时间常数 </p>
-<h3 id="传递函数的性质"><a href="#传递函数的性质" class="headerlink" title="传递函数的性质"></a>传递函数的性质</h3><p>1.传递函数$G(s)$是复函数<br>2.$G(s)$只与系统的结构参数有关<br>3.$G(s)$与系统微分方程直接关联<br>4.$G(s)= \mathscr{L}[\delta(t)]$<br>5.$G(s)$和s平面的零极点图相对应  </p>
-<h3 id="传递函数的局限性"><a href="#传递函数的局限性" class="headerlink" title="传递函数的局限性"></a>传递函数的局限性</h3><p>1.传递函数不反映非零初始条件时系统响应的全部信息<br>2.只适合<strong>单输入单输出</strong>的系统<br>3.只能表示<strong>线性定常系统</strong></p>
-<h3 id="闭环系统的传递函数"><a href="#闭环系统的传递函数" class="headerlink" title="闭环系统的传递函数"></a>闭环系统的传递函数</h3><p>设开环传递函数为$G(s)$,反馈增益为$H(s)$,则闭环传递函数为</p>
-<script type="math/tex; mode=display">\Phi(s)=\frac{G(s)}{1+G(s)H(s)}</script><p>若$\lvert{G(s)H(s)}\rvert \gg 1$ 系统特性主要由反馈决定       </p>
-<h2 id="稳定性分析"><a href="#稳定性分析" class="headerlink" title="稳定性分析"></a>稳定性分析</h2><h3 id="系统稳定的充要条件"><a href="#系统稳定的充要条件" class="headerlink" title="系统稳定的充要条件"></a>系统稳定的充要条件</h3><p>扰动可看成是一个阶跃相应</p>
+<h3 id="2-1-2传递函数的性质"><a href="#2-1-2传递函数的性质" class="headerlink" title="2.1.2传递函数的性质"></a>2.1.2传递函数的性质</h3><p>1.传递函数$G(s)$是复函数<br>2.$G(s)$只与系统的结构参数有关<br>3.$G(s)$与系统微分方程直接关联<br>4.$G(s)= \mathscr{L}[\delta(t)]$<br>5.$G(s)$和s平面的零极点图相对应  </p>
+<ul>
+<li>传递函数的局限性<br>1.传递函数不反映非零初始条件时系统响应的全部信息<br>2.只适合<strong>单输入单输出</strong>的系统<br>3.只能表示<strong>线性定常系统</strong></li>
+</ul>
+<h3 id="2-1-3闭环系统的传递函数"><a href="#2-1-3闭环系统的传递函数" class="headerlink" title="2.1.3闭环系统的传递函数"></a>2.1.3闭环系统的传递函数</h3><p><img src="https://cdn.jsdelivr.net/gh/cdsee045/blog-images/img/%E9%97%AD%E7%8E%AF%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E5%9B%BE.png" alt="闭环系统结构图"><br>典型的闭环系统结构图如图所示。R(s)为系统输入信号，C(s)为系统输出信号，N(s)为作用在系统前向通道上的扰动信号，E(s)为误差信号，B(s)为反馈信号。有R(s)和N(s)两个输入，C(s)和B(s)两个输出。两两组合可以得到四种传递函数。</p>
+<h4 id="①-闭环系统的开环传递函数"><a href="#①-闭环系统的开环传递函数" class="headerlink" title="① 闭环系统的开环传递函数"></a>① 闭环系统的开环传递函数</h4><p>闭环系统的开环传递函数是指闭环系统中的<strong>反馈信号的拉氏变换与误差信号的拉氏变换</strong>之比。相当于将反馈回路断开。</p>
+<script type="math/tex; mode=display">G_k(s)=\frac{B(s)}{E(s)}=G_1(s)G_2(s)H(s)</script><p>开环传递函数等于前向通道的传递函数与反馈通道的传递函数的乘积</p>
+<h4 id="②-闭环传递函数"><a href="#②-闭环传递函数" class="headerlink" title="② 闭环传递函数"></a>② 闭环传递函数</h4><p>输入信号作用下的闭环传递函数是指系统<strong>输出信号的拉氏变换与输入信号的拉氏变换</strong>之比</p>
+<script type="math/tex; mode=display">G_b(s)=\frac{C(s)}{R(s)}=\frac{G_1(s)G_2(s)}{1+G_1(s)G_2(s)H(s)}</script><h4 id="③-输入信号作用下的系统的误差传递函数"><a href="#③-输入信号作用下的系统的误差传递函数" class="headerlink" title="③ 输入信号作用下的系统的误差传递函数"></a>③ 输入信号作用下的系统的误差传递函数</h4><p>输入信号作用下的系统的误差传递函数是指误差信号的<strong>拉氏变换与输入信号的拉氏变换</strong>之比</p>
+<script type="math/tex; mode=display">G_{er}(s)=\frac{E(s)}{R(s)}=\frac{1}{1+G_1(s)G_2(s)H(s)}</script><h4 id="④-扰动信号作用下系统的传递函数"><a href="#④-扰动信号作用下系统的传递函数" class="headerlink" title="④ 扰动信号作用下系统的传递函数"></a>④ 扰动信号作用下系统的传递函数</h4><p><strong>输出信号的拉氏变换与扰动信号的拉氏变换</strong>之比</p>
+<script type="math/tex; mode=display">G_n(s)=\frac{C(s)}{N(s)}=\frac{G_2(s)}{1+G_1(s)G_2(s)H(s)}</script><h4 id="⑤-扰动信号作用下系统的误差传递函数"><a href="#⑤-扰动信号作用下系统的误差传递函数" class="headerlink" title="⑤ 扰动信号作用下系统的误差传递函数"></a>⑤ 扰动信号作用下系统的误差传递函数</h4><p><strong>误差信号的拉氏变换与扰动信号的拉氏变换</strong>之比</p>
+<script type="math/tex; mode=display">G_{en}=\frac{E(s)}{N(s)}=\frac{-G_2(s)H(s)}{1+G_1(s)G_2(s)H(S)}</script><hr>
+<h1 id="3-时域法"><a href="#3-时域法" class="headerlink" title="3.时域法"></a>3.时域法</h1><h2 id="3-1系统的稳定性"><a href="#3-1系统的稳定性" class="headerlink" title="3.1系统的稳定性"></a>3.1系统的稳定性</h2><p>扰动可看成是一个阶跃响应</p>
 <script type="math/tex; mode=display">\lim\limits_{t \rightarrow \infty}\delta(t)=0\iff系统稳定</script><p>由$\Phi(s)=\frac{b_m(s-z_1)(s-z_2)…(s-z_m)}{a_n(s-\lambda_1)(s-\lambda_2)…(s-\lambda_n)}$ 知 $Y(s)=\Phi(s)=\sum{\frac{A_i}{s-\lambda_i}}$  </p>
 <p>所以$y(t)=\sum A_ie^{ \lambda_i t}$<br>当$\lambda_i\lt0时，y(t)\rightarrow 0$<br>系统稳定的充要条件: &emsp;  <strong><em>所有闭环极点均位于左半s平面</em></strong></p>
-
+<h3 id="3-1-1稳定性判据"><a href="#3-1-1稳定性判据" class="headerlink" title="3.1.1稳定性判据"></a>3.1.1稳定性判据</h3><h4 id="3-2-1必要条件"><a href="#3-2-1必要条件" class="headerlink" title="3.2.1必要条件"></a>3.2.1必要条件</h4><p>$D(s)=a<em>ns^n+a</em>{n-1}s^{n-1}+…+a_1s+a_0 \hspace{2cm}a^n\gt0$<br>则系统稳定的必要条件是$a_i\gt0$</p>
+<h4 id="3-2-2劳斯判据"><a href="#3-2-2劳斯判据" class="headerlink" title="3.2.2劳斯判据"></a>3.2.2劳斯判据</h4><h4 id="3-2-3赫尔维茨判据"><a href="#3-2-3赫尔维茨判据" class="headerlink" title="3.2.3赫尔维茨判据"></a>3.2.3赫尔维茨判据</h4><h2 id="3-2-稳态误差"><a href="#3-2-稳态误差" class="headerlink" title="3.2.稳态误差"></a>3.2.稳态误差</h2><h3 id="3-2-1稳态误差的定义"><a href="#3-2-1稳态误差的定义" class="headerlink" title="3.2.1稳态误差的定义"></a>3.2.1稳态误差的定义</h3><p>从输入端定义的误差为$E(s)=R(s)-H(s)C(s)$<br>在误差信号$e(t)$中，包含瞬态分量$e<em>{st}(t)$和稳态分量$e</em>{ss}(t)$两部分。由于系统稳定，当时间趋于无穷时，必有$e<em>{st}(t)$趋于零。因此，控制系统的稳态误差$e</em>{ss}(t)$定义为当时间趋于无穷时，$e(t)$的极限,即$e<em>{ss}(t)=\lim</em>{t \to \infty}e(t)$<br>记$e(t)$的拉普拉斯变换为$E(s)$,该极限可由拉普拉斯终值定理求得<script type="math/tex">e_{ss}=lim_{s\to 0}sE(s)</script></p>
+<h3 id="3-2-2计算稳态误差"><a href="#3-2-2计算稳态误差" class="headerlink" title="3.2.2计算稳态误差"></a>3.2.2计算稳态误差</h3><h4 id="①-通用解法"><a href="#①-通用解法" class="headerlink" title="① 通用解法"></a>① 通用解法</h4><ol>
+<li>判断系统稳定性</li>
+<li>求误差传递函数  $\Phi<em>e(s)和 \Phi</em>{en}(s)$</li>
+<li>用终值定理求解  $e<em>{ss}(t)=\lim</em>{s \to 0}s[\Phi<em>e(s)R(s)+\Phi</em>{en}(s)N(s)]$</li>
+</ol>
+<h4 id="②-静态误差系数法-给定输入下，不考虑干扰作用"><a href="#②-静态误差系数法-给定输入下，不考虑干扰作用" class="headerlink" title="② 静态误差系数法(给定输入下，不考虑干扰作用)"></a>② 静态误差系数法(给定输入下，不考虑干扰作用)</h4><p><img src="https://cdn.jsdelivr.net/gh/cdsee045/blog-images/img/2026-05-29_16-58.png" alt=""><br>由终值定理得$e<em>{ss}(t)=\lim</em>{s\to 0}s\Phi<em>e(s)R(s)=\lim</em>{s \to 0}s\frac{1}{1+G(s)H(s)}R(s)$<br>把开环传递函数$G(s)H(s)$表示为尾一标准型</p>
+<script type="math/tex; mode=display">G(s)H(s)=\frac{K\prod_{i=1}^m(\tau_is+1)}{s^v\prod_{j=v+1}^n(T_js+1)}=\frac{K}{s^v}G_0(s)\hspace{2em} 其中\lim_{s\to0}G_0(s)=1</script><p>K是开环增益，V是系统型别</p>
+<ul>
+<li>$r(t)=A*1(t)$，代入公式有$e<em>{ss}=\lim</em>{s\to0}\frac{A}{1+\frac{K}{s^v}}$</li>
+<li>$r(t)=A*t$，代入公式有$e<em>{ss}=\lim</em>{s\to0}\frac{A}{\frac{K}{s^{v-1}}}$</li>
+<li>$r(t)=\frac{A}{2}t^2$，代入公式有$e<em>{ss}=\lim</em>{s\to0}\frac{A}{\frac{K}{s^{v-2}}}$<br>记<br>$K_p=\frac{K}{s^v} $  定义为静态位置误差系数<br>$K_v=\frac{K}{s^{v-1}}$ 定义为静态速度误差系数<br>$K_a=\frac{K}{s^{v-2}}$ 定义为静态加速度误差系数</li>
+</ul>
+<h5 id="静态误差系数与稳态误差对照表"><a href="#静态误差系数与稳态误差对照表" class="headerlink" title="静态误差系数与稳态误差对照表"></a>静态误差系数与稳态误差对照表</h5><ul>
+<li>$K$ 为开环增益（尾一标准型下的系数）</li>
+<li>$v$ 为系统型别（开环传递函数中积分环节 $s$ 的个数）</li>
+<li>$A$ 为输入信号的幅值</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">系统型别</th>
+<th style="text-align:center">静态位置误差系数 $K_p$</th>
+<th style="text-align:center">静态速度误差系数 $K_v$</th>
+<th style="text-align:center">静态加速度误差系数 $K_a$</th>
+<th style="text-align:center">阶跃输入作用下 $e_{ss}$</th>
+<th style="text-align:center">斜坡输入作用下 $e_{ss}$</th>
+<th style="text-align:center">加速度输入作用下 $e_{ss}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>0 型</strong></td>
+<td style="text-align:center">$K$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$\frac{A}{1+K}$</td>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">$\infty$</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>I 型</strong></td>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">$K$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$\frac{A}{K}$</td>
+<td style="text-align:center">$\infty$</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>II 型</strong></td>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">$K$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$\frac{A}{K}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><ol>
+<li><strong>$K_p$ (静态位置误差系数)：</strong> 对应阶跃输入。$0$型系统有固定误差，高于$0$型则无误差。</li>
+<li><strong>$K_v$ (静态速度误差系数)：</strong> 对应斜坡输入。$0$型系统跟踪不上（误差无穷大），$I$型系统有固定误差，高于$I$型则无误差。</li>
+<li><strong>$K_a$ (静态加速度误差系数)：</strong> 对应加速度输入。仅在$II$型及以上系统中才能实现有限误差或零误差。</li>
+<li><strong>注意：</strong> 计算上述 $K_p, K_v, K_a$ 时，使用的 $G(s)H(s)$ 必须是<strong>时间常数形式（尾一标准型）</strong>。</li>
+</ol>
+<hr>
+<h2 id="3-3-时域分析"><a href="#3-3-时域分析" class="headerlink" title="3.3.时域分析"></a>3.3.时域分析</h2><hr>
+<h1 id="4-根轨迹法"><a href="#4-根轨迹法" class="headerlink" title="4.根轨迹法"></a>4.根轨迹法</h1><hr>
+<h1 id="5-频域法"><a href="#5-频域法" class="headerlink" title="5.频域法"></a>5.频域法</h1><hr>
+<h1 id="6-控制系统的校正"><a href="#6-控制系统的校正" class="headerlink" title="6.控制系统的校正"></a>6.控制系统的校正</h1>
                 
             </div>
             <hr/>
@@ -723,6 +806,13 @@ a_ny^{(n)}+a_{n-1}y^{(n-1)}+...+a_0y=b">
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 

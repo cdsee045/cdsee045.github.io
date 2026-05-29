@@ -450,9 +450,15 @@ step(num,den,t)  无返回值调用时直接绘制图像<span aria-hidden="true"
 <h3 id="2-3系统的单位脉冲响应"><a href="#2-3系统的单位脉冲响应" class="headerlink" title="2.3系统的单位脉冲响应"></a>2.3系统的单位脉冲响应</h3><p>impulse()和dimpulse()调用格式与step()完全一致</p>
 <h3 id="2-4系统的零输入响应"><a href="#2-4系统的零输入响应" class="headerlink" title="2.4系统的零输入响应"></a>2.4系统的零输入响应</h3><h3 id="2-5任意输入函数的响应"><a href="#2-5任意输入函数的响应" class="headerlink" title="2.5任意输入函数的响应"></a>2.5任意输入函数的响应</h3><h4 id="连续系统lsim"><a href="#连续系统lsim" class="headerlink" title="连续系统lsim()"></a>连续系统lsim()</h4><pre class="line-numbers language-none"><code class="language-none">u 给定输入序列
 [y,x]&#x3D;lsim(num,den,u,t)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="离散系统dlsim-num-den-u-n"><a href="#离散系统dlsim-num-den-u-n" class="headerlink" title="离散系统dlsim(num,den,u,n)"></a>离散系统dlsim(num,den,u,n)</h4><h2 id=""><a href="#" class="headerlink" title=""></a><pre class="line-numbers language-none"><code class="language-none">[y,x]&#x3D;dlsim(num,den,u,n)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></h2><h2 id="3-根轨迹法"><a href="#3-根轨迹法" class="headerlink" title="3. 根轨迹法"></a>3. 根轨迹法</h2><p>根轨迹指 开环系统的某一参数从0变化到无穷大时，闭环系统的特征方程的根在s平面所形成的轨迹。一般将开环增益K作为该参数。</p>
+<h4 id="离散系统dlsim-num-den-u-n"><a href="#离散系统dlsim-num-den-u-n" class="headerlink" title="离散系统dlsim(num,den,u,n)"></a>离散系统dlsim(num,den,u,n)</h4><h2 id=""><a href="#" class="headerlink" title=""></a><pre class="line-numbers language-none"><code class="language-none">[y,x]&#x3D;dlsim(num,den,u,n)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></h2><h2 id="3-根轨迹法"><a href="#3-根轨迹法" class="headerlink" title="3. 根轨迹法"></a>3. 根轨迹法</h2><p>根轨迹指 开环系统的某一参数从0变化到无穷大时，闭环系统的特征方程的根在s平面所形成的轨迹。一般将开环增益K作为该参数。<br>|函数|说明|<br>|:—-:|:—-:|<br>|pzmap()|绘制零极点图|<br>|rlocus()|绘制根轨迹|<br>|rlocfind()|求给定根的根轨迹增益,需要先绘制根轨迹|<br>|sgrid()|绘制连续系统的阻尼系数和自然频率网络根轨迹|<br>|zgrid()|绘制离散系统的阻尼系数和自然频率网络根轨迹|</p>
+<p>例 某负反馈系统的开环传递函数为</p>
+<script type="math/tex; mode=display">G(s)H(s)=\frac{K}{s(s+1)(s+2)}</script><p>绘制根轨迹和栅格线，并分析系统稳定的K值范围<br><pre class="line-numbers language-none"><code class="language-none">num&#x3D;,;den&#x3D;[1 3 2 0];
+rlocus(num,den);
+[K,poles]&#x3D;rlocusfind(num,den) #找根轨迹上点对应的开环增益
+sgrid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
 <hr>
-<h2 id="4-频域分析"><a href="#4-频域分析" class="headerlink" title="4. 频域分析"></a>4. 频域分析</h2><hr>
+<h2 id="4-频域分析"><a href="#4-频域分析" class="headerlink" title="4. 频域分析"></a>4. 频域分析</h2><p>线性系统受到频率为$\omega$的正弦信号激励时，输出仍为同频率的正弦信号，但幅值M与输入信号成比例，相位有一个相位差$\phi$<br>| 函数名 | 功能 | 函数名 | 功能 |<br>| :—- | :—- | :—- | :—- |<br>| <strong>logspace()</strong> | 产生频率向量 | <strong>ngrid()</strong> | 绘制等 M、N 圆网格线 |<br>| <strong>bode()</strong> | 连续系统的伯德图 | <strong>sigma()</strong> | 连续系统的奇异值频率图 |<br>| <strong>dbode()</strong> | 离散系统的伯德图 | <strong>dsigma()</strong> | 离散系统的奇异值频率图 |<br>| <strong>nyquist()</strong> | 连续系统的奈奎斯特图 | <strong>freqresp()</strong> | 求取频率响应值 |<br>| <strong>dnyquist()</strong> | 离散系统的奈奎斯特图 | <strong>evalfr()</strong> | 求取单个复数频率点处的频率响应值 |<br>| <strong>nichols()</strong> | 连续系统的尼科尔斯曲线 | <strong>margin()</strong> | 求取幅值裕量、相位裕量及对应的穿越频率 |<br>| <strong>dnichols()</strong> | 离散系统的尼科尔斯曲线 | | |</p>
+<hr>
 <h2 id="5-能控型能观型分析"><a href="#5-能控型能观型分析" class="headerlink" title="5. 能控型能观型分析"></a>5. 能控型能观型分析</h2>
                 
             </div>
@@ -479,7 +485,7 @@ step(num,den,t)  无返回值调用时直接绘制图像<span aria-hidden="true"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cdsee045.github.io/uncategorized/%E5%B7%A5%E5%85%B7/matlab/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90/">https://cdsee045.github.io/uncategorized/%E5%B7%A5%E5%85%B7/matlab/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90/</a>
+                    <a href="https://cdsee045.github.io/uncategorized/%E5%B7%A5%E5%85%B7/matlab/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/">https://cdsee045.github.io/uncategorized/%E5%B7%A5%E5%85%B7/matlab/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/</a>
                 </span>
             </div>
             <div class="reprint__notice">
