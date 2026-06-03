@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, Phoox">
-    <meta name="description" content="Phoox">
+    <meta name="keywords" content="第二部分 现代控制理论, Phoox">
+    <meta name="description" content="状态空间表达式状态变量状态变量是表征系统运动状态的最小个数的一组变量，即给定状态变量初值$x(t_0)$及$t\gt t_0$时刻的输入$u(t)$,就可以完全确定系统在$t\gt t_0$时刻的动态行为状态变量的特点  
+
+状态变量是相互">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | Phoox</title>
+    <title>第二部分 现代控制理论 | Phoox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -329,191 +331,500 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">第二部分 现代控制理论</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
     <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    subtitle
-                
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%90%86%E8%AE%BA/" class="post-category">
+                                理论
+                            </a>
+                        
+                            <a href="/categories/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/" class="post-category">
+                                控制理论
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
 
-            <div class="description center-align">
+            <div class="post-info">
                 
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2026-05-19
+                </div>
+                
+
+                
+
+                
+
+                
+
                 
             </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="状态空间表达式"><a href="#状态空间表达式" class="headerlink" title="状态空间表达式"></a>状态空间表达式</h2><h3 id="状态变量"><a href="#状态变量" class="headerlink" title="状态变量"></a>状态变量</h3><p>状态变量是表征系统运动状态的最小个数的一组变量，即给定状态变量初值$x(t_0)$及$t\gt t_0$时刻的输入$u(t)$,就可以完全确定系统在$t\gt t_0$时刻的动态行为<br>状态变量的特点  </p>
+<ul>
+<li>状态变量是相互独立(线性无关的)</li>
+<li>状态变量的个数等于系统独立储能元件的个数</li>
+<li>状态变量的选取不唯一  </li>
+</ul>
+<p>状态变量按列向量排列构成状态向量 $\iff$ 自动控制理论的传递函数</p>
+<h3 id="状态方程"><a href="#状态方程" class="headerlink" title="状态方程"></a>状态方程</h3><p>由系统状态变量构成的描述系统动态过程的一阶微分方程称为状态方程<br><strong>表征状态与输入之间的关系</strong><br>形式为 <script type="math/tex">\dot{x(t)}=Ax(t)+Bu(t)</script></p>
+<h3 id="输出方程"><a href="#输出方程" class="headerlink" title="输出方程"></a>输出方程</h3><p>在指定系统输出$y$的情况下，输出$y$向量与状态变量$x$及输入变量$u$的函数关系式<br><strong>表征状态与输出的关系</strong><br>形式为 <script type="math/tex">y(t)=Cx(t)+Du(t)</script></p>
+<h3 id="状态空间表达式-1"><a href="#状态空间表达式-1" class="headerlink" title="状态空间表达式"></a>状态空间表达式</h3><p>将状态方程和输出方程总和起来，构成对一个系统的完整动态描述称为系统的状态空间表达式<br>形式 <script type="math/tex">\dot{x(t)}=Ax(t)+Bu(t)</script> <script type="math/tex">y(t)=Cx(t)+Du(t)</script><br>其中：</p>
+<ul>
+<li>$x\in R^n$ 状态向量</li>
+<li>$u\in R^r$ 输入向量</li>
+<li>$y\in R^m$ 输出向量</li>
+<li>$A\in R^{n\times n}$ 系统矩阵 表征系统内部状态的联系</li>
+<li>$B\in R^{n\times r}$ 控制矩阵 表征系统输入对状态的作用</li>
+<li>$C\in R^{m\times n}$ 输出矩阵 表征输出与状态变量的关系</li>
+<li>$D\in R^{m\times r}$ 传输矩阵 表征输出与输入的关系</li>
+</ul>
+<h3 id="实现问题"><a href="#实现问题" class="headerlink" title="实现问题"></a>实现问题</h3><p>由输入输出描述(控制系统的外部描述)确定状态空间描述(控制系统的内部描述)的问题称为实现问题<br>设 $m\lt n$  </p>
+<script type="math/tex; mode=display">Y(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+...+b_1s+b_0}{s^n+a_{n-1}s^{n-1}+...+a_1s+a_0} U(s)</script><p>引入中间变量$Y_1(S)$ </p>
+<script type="math/tex; mode=display">Y_1(s)=\frac{1}{s^n+a_{n-1}s^{n-1}+...+a_1s+a_0}U(s)</script><p>有 </p>
+<script type="math/tex; mode=display">Y(s)=Y_1(s)[b_ms^m+b_{m-1}s^{m-1}+...+b_1s+b_0]</script><script type="math/tex; mode=display">Y_1(s)[s^n+a_{n-1}s^{n-1}+...+a_1s+a_0]=U(s)</script><p>做拉氏反变换有 </p>
+<script type="math/tex; mode=display">y(t)=b_my_1^{(m)}+b_{m-1}y_1^{(m-1)}+...+b_1y_1'+b_0y_1</script><script type="math/tex; mode=display">y_1^{(n)}+a_{n-1}y_1^{(n-1)}+...a_1y_1'+a_0y_1=u</script><p>选取状态变量$ x_1=y_1 ,x_2=y_1’,…,x_n=y_1^{(n-1)}$<br>得状态方程  </p>
+<script type="math/tex; mode=display">\dot{x_1}=x_2\\\dot{x_2}=x_3\\...\\ \dot{x_{n-1}}=x_n</script><script type="math/tex; mode=display">\dot{x_n}=-a_{n-1}x_n-a_{n-2}x_{n-1}-...-a_1x_2-a_0x_1+u</script><p>输出方程</p>
+<script type="math/tex; mode=display">y=b_mx_{m+1}+b_{m_1}x_{m}+...+b_1x_2+b_0x_1</script><script type="math/tex; mode=display">
+\begin{bmatrix}
+\dot{x_1}\\ \dot{x_2}\\ ...\\ \dot{x_n}
+\end{bmatrix}
+= \begin{bmatrix}
+0&1&0&...&0\\
+0&0&1&...&0\\
+...&...&...&...&0\\
+0&0&0&...&1\\
+-a_0&-a_1&-a_2&...&-a_{n-1}
+\end{bmatrix}
+\begin{bmatrix}
+    x_1\\x_2\\x_3\\...\\x_n
+\end{bmatrix}
++\begin{bmatrix}
+    0\\0\\0\\...\\1
+\end{bmatrix}u</script><p>上述形式被称为能控标准一型</p>
+<p>状态空间表达式不唯一，特征值唯一</p>
+<h2 id="状态空间表达式的规范型-相似对角化"><a href="#状态空间表达式的规范型-相似对角化" class="headerlink" title="状态空间表达式的规范型(相似对角化)"></a>状态空间表达式的规范型(相似对角化)</h2><h3 id="对角规范型"><a href="#对角规范型" class="headerlink" title="对角规范型"></a>对角规范型</h3><ul>
+<li>特征值两两互异<br>系统$\dot{x}=Ax+Bu$，设其特征值两两互异，由特征向量组成的变换阵<br>$T=\begin{bmatrix}P_1&amp;P_2&amp;…&amp; P_n\end{bmatrix}$<br>状态方程在$Z=T^{-1}x$变换下可化为如下对角型  <script type="math/tex; mode=display">\dot{Z}=\begin{bmatrix}\lambda_1&0&0&...&0\\ 0&\lambda_2&0&...&0\\ 0&0&\lambda_3&...&0\\...&...&...&...&0\\ 0&0&0&...&\lambda_n\end{bmatrix}z+T^{-1}Bu</script></li>
+</ul>
+<p>在对角规范型下，个状态变量实现了解耦</p>
+<h3 id="约旦规范型"><a href="#约旦规范型" class="headerlink" title="约旦规范型"></a>约旦规范型</h3><ul>
+<li>特征值存在重根  <script type="math/tex; mode=display">A_J=\begin{bmatrix}J_1&0&0&...&0\\ 0&J_2&0&...&0\\ 0&0&J_3&...&0\\ ...&...&...&...&...\\ 0&0&0&...&J_K\end{bmatrix}</script>其中每个约旦块<script type="math/tex; mode=display">J_i=\begin{bmatrix}\lambda_i&1&0&...&0\\0&\lambda_i&1&...&0\\0&0&\lambda_i&...&0\\...&...&...&...&1\\0&0&0&...&\lambda_i\end{bmatrix}</script></li>
+</ul>
+<h3 id="传递函数和状态空间表达式的联系"><a href="#传递函数和状态空间表达式的联系" class="headerlink" title="传递函数和状态空间表达式的联系"></a>传递函数和状态空间表达式的联系</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">经典理论</td>
+<td style="text-align:center">传递函数</td>
+<td style="text-align:center">特征多项式</td>
+<td style="text-align:center">极点</td>
+</tr>
+<tr>
+<td style="text-align:center">现代理论</td>
+<td style="text-align:center">状态向量</td>
+<td style="text-align:center">系统矩阵</td>
+<td style="text-align:center">特征值</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>由状态空间表达式求传递函数阵 只需消去中间变量x</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\dot{x}=Ax+Bu\\
+y=Cx+Du
+\end{cases}</script><p>取拉氏变换后</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+sX(s)=AX(s)+BU(s)\\
+Y(s)=CX(s)+DU(s)
+\end{cases}
+\rightarrow
+\begin{cases}
+X(s)=(sI-A)^{-1}BU(s)\\
+Y(s)=(C(sI-A)^{-1}B+D)U(s)
+\end{cases}</script><p>故<script type="math/tex">G(s)=C(sI-A)^{-1}B+D</script></p>
+<h2 id="状态空间表达式的解"><a href="#状态空间表达式的解" class="headerlink" title="状态空间表达式的解"></a>状态空间表达式的解</h2><p>对线性定常系统，已知$\dot x=Ax+Bu,x(0)=x_0,t\ge0$<br>则</p>
+<script type="math/tex; mode=display">x(t)=e^{At}x_0+\int_0^t\Phi(t-\tau)Bu(\tau)d\tau</script>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">phoox</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://cdsee045.github.io/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%8E%B0%E4%BB%A3%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/">https://cdsee045.github.io/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%8E%B0%E4%BB%A3%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">phoox</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A7%E5%88%B6/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="计算机控制">
+                        
+                        <span class="card-title">计算机控制</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%90%86%E8%AE%BA/" class="post-category">
+                                    理论
+                                </a>
+                            
+                            <a href="/categories/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/" class="post-category">
+                                    控制理论
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="前言：数学基础">
+                        
+                        <span class="card-title">前言：数学基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%90%86%E8%AE%BA/" class="post-category">
+                                    理论
+                                </a>
+                            
+                            <a href="/categories/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/" class="post-category">
+                                    控制理论
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.tomorrow.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
 </div>
 
+<!-- TOC 悬浮按钮. -->
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-<script>
-    
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
-    
-    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
-
-</script>
-
-
-    </div>
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
 </div>
 
-<main class="content">
-    <style>
-        .category-overview { padding: 20px 0; }
-        .category-overview .card { border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-        .category-overview .card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-        .category-parent-card { margin-bottom: 30px; }
-        .category-parent-header { background: linear-gradient(135deg, #42b983, #35a070); color: #fff; padding: 20px 25px; }
-        .category-parent-header h3 { margin: 0; font-size: 1.8rem; font-weight: 600; }
-        .category-parent-header .count-badge { background: rgba(255,255,255,0.25); border-radius: 20px; padding: 4px 14px; font-size: 0.9rem; margin-left: 12px; }
-        .category-parent-header a { color: #fff; text-decoration: none; }
-        .category-parent-header a:hover { text-decoration: underline; }
-        .category-children { padding: 20px 25px; }
-        .category-child-chip { display: inline-block; margin: 6px 8px 6px 0; padding: 8px 18px; border-radius: 20px; background: #f0f7f4; color: #2c3e50; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: 1px solid #e0ebe5; }
-        .category-child-chip:hover { background: #42b983; color: #fff; border-color: #42b983; transform: scale(1.03); }
-        .category-child-chip .chip-count { background: rgba(0,0,0,0.08); border-radius: 10px; padding: 2px 8px; font-size: 0.8rem; margin-left: 6px; }
-        .category-child-chip:hover .chip-count { background: rgba(255,255,255,0.25); }
-        .category-empty { text-align: center; padding: 60px 20px; color: #999; }
-        .category-empty i { font-size: 3rem; margin-bottom: 15px; display: block; }
-        .category-section-title { text-align: center; margin: 30px 0 10px; }
-        .category-section-title i { color: #42b983; margin-right: 8px; }
-    </style>
 
-    <div class="category-overview container">
-        
-        
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
 
-        
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
 
         
-        
-        <div class="category-parent-card" data-aos="fade-up" data-aos-delay="0">
-            <div class="card">
-                <div class="category-parent-header">
-                    <h3>
-                        <a href="/categories/%E5%B7%A5%E5%85%B7/">
-                            <i class="fas fa-folder-open"></i> 工具
-                        </a>
-                        <span class="count-badge">22 篇文章</span>
-                    </h3>
-                </div>
-                
-                <div class="category-children">
-                    
-                    <a href="/categories/%E5%B7%A5%E5%85%B7/Linux/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> Linux
-                        <span class="chip-count">1</span>
-                    </a>
-                    
-                    <a href="/categories/%E5%B7%A5%E5%85%B7/Markdown/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> Markdown
-                        <span class="chip-count">2</span>
-                    </a>
-                    
-                    <a href="/categories/%E5%B7%A5%E5%85%B7/MATLAB/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> MATLAB
-                        <span class="chip-count">3</span>
-                    </a>
-                    
-                    <a href="/categories/%E5%B7%A5%E5%85%B7/Python/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> Python
-                        <span class="chip-count">4</span>
-                    </a>
-                    
-                    <a href="/categories/%E5%B7%A5%E5%85%B7/ROS/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> ROS
-                        <span class="chip-count">1</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="category-parent-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-                <div class="category-parent-header">
-                    <h3>
-                        <a href="/categories/%E7%90%86%E8%AE%BA/">
-                            <i class="fas fa-folder-open"></i> 理论
-                        </a>
-                        <span class="count-badge">10 篇文章</span>
-                    </h3>
-                </div>
-                
-                <div class="category-children">
-                    
-                    <a href="/categories/%E7%90%86%E8%AE%BA/%E6%8E%A7%E5%88%B6%E7%90%86%E8%AE%BA/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> 控制理论
-                        <span class="chip-count">4</span>
-                    </a>
-                    
-                    <a href="/categories/%E7%90%86%E8%AE%BA/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> 数值分析
-                        <span class="chip-count">1</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="category-parent-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="card">
-                <div class="category-parent-header">
-                    <h3>
-                        <a href="/categories/%E9%A1%B9%E7%9B%AE/">
-                            <i class="fas fa-folder-open"></i> 项目
-                        </a>
-                        <span class="count-badge">2 篇文章</span>
-                    </h3>
-                </div>
-                
-                <div class="category-children">
-                    
-                    <a href="/categories/%E9%A1%B9%E7%9B%AE/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category-child-chip">
-                        <i class="fas fa-folder"></i> 博客搭建
-                        <span class="chip-count">1</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
 
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
         
-    </div>
+    });
+</script>
+
+    
+
 </main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
