@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="NumPy数值计算, Phoox">
-    <meta name="description" content="list列表可以当作数组来使用，但是列表的元素可以为任何对象，所以浪费了cpu运算的时间和内存，NumPy则解决了这一问题。Numpy提供了两种对象：nddarry(n-dimensional array object) 存储单一数据类型的">
+    <meta name="keywords" content="Pandas统计分析, Phoox">
+    <meta name="description" content="1.Pandas中的数据结构Pandas有三种数据结构：Series、DataFrame和Panel。Series类似于数组；Datarame类似于表格；Panel可视为Excel的多表单Sheet。
+1.1Series的创建1) 通过列表">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>NumPy数值计算 | Phoox</title>
+    <title>Pandas统计分析 | Phoox</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -333,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">NumPy数值计算</h1>
+                    <h1 class="description center-align post-title">Pandas统计分析</h1>
                 </div>
             </div>
         </div>
@@ -387,7 +388,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-06-02
+                    2026-06-04
                 </div>
                 
 
@@ -411,113 +412,276 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>list列表可以当作数组来使用，但是列表的元素可以为任何对象，所以浪费了cpu运算的时间和内存，NumPy则解决了这一问题。<br>Numpy提供了两种对象：nddarry(n-dimensional array object) 存储单一数据类型的多维数组<br>和ufunc(universal function object) 对数组进行处理的函数</p>
-<h1 id="1-NumPy多维数组"><a href="#1-NumPy多维数组" class="headerlink" title="1.NumPy多维数组"></a>1.NumPy多维数组</h1><h2 id="1-1创建数组对象"><a href="#1-1创建数组对象" class="headerlink" title="1.1创建数组对象"></a>1.1创建数组对象</h2><p>ndarray是一个数据容器，其中所有的元素数据类型相同 NumPy库能将列表、元组、数组等类型的数据转换为ndarray数组</p>
-<h3 id="1-1-1使用array函数创建数组对象"><a href="#1-1-1使用array函数创建数组对象" class="headerlink" title="1.1.1使用array函数创建数组对象"></a>1.1.1使用array函数创建数组对象</h3><p><code>np.array(object,dtype,ndim)</code></p>
-<ul>
-<li>object 要创建的数组 </li>
-<li>dtype  制定数组的类型 默认为None</li>
-<li>ndmin  数组的维数 默认为None<pre class="line-numbers language-none"><code class="language-none">w1&#x3D;np.array([1,3,5,7])    #列表
-w2&#x3D;np.array((1,3,5,7))    #元组
-w3&#x3D;np.array([[1,2,3][4,5,6]]) #多维数组<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-NumPy会为数组推断合适的数组类型。当序列含有整数和浮点数时，NumPy会把dtype定义为浮点型<h3 id="1-2-2专门创建数组的函数"><a href="#1-2-2专门创建数组的函数" class="headerlink" title="1.2.2专门创建数组的函数"></a>1.2.2专门创建数组的函数</h3>使用array函数创建数组效率不高，NumPy提供了很多专门创建数组的函数<br>1) arange函数<br>arange 类似于python内置函数range<br>参数(start, stop, step) start默认0 step默认1  生成序列<strong>不含stop</strong><pre class="line-numbers language-none"><code class="language-none">array1&#x3D;np.array(10)         # [0 1 2 3 4 5 6 7 8 9]
-array2&#x3D;np.array(0,1,0.2)    # [0. 0.2 0.4 0.6 0.8]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-2)linspace函数<br>当arange参数为浮点型时，由于浮点数精度有限，所以难以获得元素的数量。此时可以使用linspace<br>参数(start, stop, num)<br><code>array1=np.linspace(0,1,5)    #[0. 0.25 0.5 0.75 1]</code><br><br><br>3)logspace函数<br>logspace函数与linspace函数类似，但创建的的是等比数列。起始位和终止位表示10的幂<pre class="line-numbers language-none"><code class="language-none">array1&#x3D;np.logspace(0,1,5)    #生成1～10的具有五个元素的等比数列<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-4)zeros函数<br>创建制定长度或形状的全0数组<pre class="line-numbers language-none"><code class="language-none">np.zeros(4)
-np.zeros([3,3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-5)ones函数<br>创建指定长度或形状的全1数组<pre class="line-numbers language-none"><code class="language-none">np.ones(5)
-np.ones([2,3])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-6)diag函数<br>创建对角阵，指定对角线元素。<pre class="line-numbers language-none"><code class="language-none">np.diag([1,2,3,4])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ul>
-<h2 id="1-2ndarray对象属性和数据转换"><a href="#1-2ndarray对象属性和数据转换" class="headerlink" title="1.2ndarray对象属性和数据转换"></a>1.2ndarray对象属性和数据转换</h2><p>NumPy创建的ndarray对象属性主要有shape、size等属性</p>
-<ul>
-<li>ndim 秩 数据轴的个数</li>
-<li>shape 数组的维度</li>
-<li>size  数组元素个数</li>
-<li>dtype 数据类型</li>
-<li>itemsize 数组中每个元素的字节大小<pre class="line-numbers language-none"><code class="language-none">w1&#x3D;np.array([1 2 3][ 4 5 6])
-print(w1.ndim)
-print(w1.shape)
-print(w1.size)
-print(w1.dtype)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h2 id="1-3生成随机数"><a href="#1-3生成随机数" class="headerlink" title="1.3生成随机数"></a>1.3生成随机数</h2><p>Numpy.random模块中有许多随机数的生成函数</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">方法</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>np.random.rand(d0, d1, ... dn)</code></td>
-<td style="text-align:left">创建d0-dn维度的均匀分布的随机数数组，浮点数，范围从0-1</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>np.random.randn(d0, d1, ... dn)</code></td>
-<td style="text-align:left">创建d0-dn维度的标准正态分布随机数，浮点数，平均数0，标准差1</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>np.random.randint(low, high=None, size=None)</code></td>
-<td style="text-align:left">从给定上下限范围选取随机整数，范围是low, high，形状size</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>np.random.uniform(low, high, size)</code></td>
-<td style="text-align:left">产生具有均匀分布的小数数组，下界是low，上界是high，size形状</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>np.random.normal(loc, scale, size)</code></td>
-<td style="text-align:left">从正态分布中随机取一组样本，分布中是loc(均值)，scale(标准差)，size形状</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>np.random.seed(s)</code></td>
-<td style="text-align:left">随机种子，s是给定的种子值。因为计算机生成的是伪随机数，所以通过设定相同的随机种子，可以每次生成相同的随机数</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="1-4数组变换"><a href="#1-4数组变换" class="headerlink" title="1.4数组变换"></a>1.4数组变换</h2><h3 id="1-数组重塑"><a href="#1-数组重塑" class="headerlink" title="(1)数组重塑"></a>(1)数组重塑</h3><p>对定义好的数组，可以通过reshape方法改变其维度，传入参数为新维度的元组<br><pre class="line-numbers language-none"><code class="language-none">arr1&#x3D;np.arange(8)
-arr2&#x3D;arr1.reshape(4,2)
-arr3&#x3D;np.arange(6).reshape(2,3)  #创建多维数组<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><br>与reshape相反的方法是散开或者扁平化flatten<br><pre class="line-numbers language-none"><code class="language-none">arr1&#x3D;np.arange(12).reshape(3,4)
-arr2&#x3D;arr1.flatten<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<h3 id="2-数组合并"><a href="#2-数组合并" class="headerlink" title="(2)数组合并"></a>(2)数组合并</h3><p>数组合并用于多个数字间的操作，Numpy使用hstack、stack完成数组合并<br><pre class="line-numbers language-none"><code class="language-none">arr1&#x3D;np.arange(6).reshape(3,2)
-arr2&#x3D;arr1*2
-#横向合并
-arr3&#x3D;np.hstack((arr1,arr2))
+                <h1 id="1-Pandas中的数据结构"><a href="#1-Pandas中的数据结构" class="headerlink" title="1.Pandas中的数据结构"></a>1.Pandas中的数据结构</h1><p>Pandas有三种数据结构：Series、DataFrame和Panel。Series类似于数组；Datarame类似于表格；Panel可视为Excel的多表单Sheet。</p>
+<h2 id="1-1Series的创建"><a href="#1-1Series的创建" class="headerlink" title="1.1Series的创建"></a>1.1Series的创建</h2><p>1) 通过列表创建<br><pre class="line-numbers language-none"><code class="language-none">obj&#x3D;pd.Series([1,2,3])
+#结果
+0  1
+1  2
+2  3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>输出第一列为index，第二列为数据value。创建Series时不指定index会采用整型数据作为index<br><pre class="line-numbers language-none"><code class="language-none">i&#x3D;[&quot;a&quot;,&quot;c&quot;,&quot;d&quot;,&quot;a&quot;]
+v&#x3D;[2,4,5,7]
+t&#x3D;pd.Series(v,index&#x3D;i,name&#x3D;&quot;col&quot;)
+print(t)
 
-#纵向合并
-arr34&#x3D;np.vstack((arr1,arr2))
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h2 id="3-数组分割"><a href="#3-数组分割" class="headerlink" title="(3)数组分割"></a>(3)数组分割</h2><p>NumPy提供了hsplit、split实现数组的横向、纵向分割</p>
-<h2 id="4-数组转置和轴对换"><a href="#4-数组转置和轴对换" class="headerlink" title="(4)数组转置和轴对换"></a>(4)数组转置和轴对换</h2><p>数组转置可以通过transpose方法进行转置,也可以使用数组的T属性进行转置,还可以使用swapaxes方法实现轴对换<br><pre class="line-numbers language-none"><code class="language-none">arr&#x3D;np.arange(6).reshape(3,2)
-arr1&#x3D;arr.transpose()      # transpose方法
-arr2&#x3D;arr.T                # T方法
-arr3&#x3D;arr.swapaxes(0,1)    #swapaxes方法<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h1 id="2-数组的索引和切片"><a href="#2-数组的索引和切片" class="headerlink" title="2.数组的索引和切片"></a>2.数组的索引和切片</h1><h2 id="2-1一维数组的索引"><a href="#2-1一维数组的索引" class="headerlink" title="2.1一维数组的索引"></a>2.1一维数组的索引</h2><p>一维数组的索引类似于Python中的列表<br><pre class="line-numbers language-none"><code class="language-none">arr&#x3D;np.arange(10)
-arr[2]
-arr[-1]
-arr[1:4]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h2 id="2-2多维数组的索引"><a href="#2-2多维数组的索引" class="headerlink" title="2.2多维数组的索引"></a>2.2多维数组的索引</h2><p>对于多维数组，它的每一个维度都有一个索引，各个纬度的索引之间用逗号分隔。<br><pre class="line-numbers language-none"><code class="language-none">arr&#x3D;np.arange(12).reshape(3,4)
-arr[0,1:3]
-arr[:,2]
-arr[:1,:1]
-arr[(0,1),(1,3)]
-arr[1:2,(0,2,3)]
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-<h1 id="3数组的运算"><a href="#3数组的运算" class="headerlink" title="3数组的运算"></a>3数组的运算</h1><h2 id="3-1数组和标量的运算"><a href="#3-1数组和标量的运算" class="headerlink" title="3.1数组和标量的运算"></a>3.1数组和标量的运算</h2><p>数组的算术运算可以直接应用到元素中<br><pre class="line-numbers language-none"><code class="language-none">a&#x3D;[1,2,3]
-b&#x3D;a*2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<h2 id="3-2ufunc函数"><a href="#3-2ufunc函数" class="headerlink" title="3.2ufunc函数"></a>3.2ufunc函数</h2><p>ufunc函数全称为通用函数，是一种能够对数组中的所有元素进行操作的函数。</p>
-<h3 id="3-2-1常用的ufunc函数运算"><a href="#3-2-1常用的ufunc函数运算" class="headerlink" title="3.2.1常用的ufunc函数运算"></a>3.2.1常用的ufunc函数运算</h3><p>常见的ufunc函数运算有四则运算、比较运算和逻辑运算<br>(1) 四则运算： 加、减、乘、除、幂 数组间的四则运算表示对每个元素分别进行四则运算，所以数组的形状必须相同。<br>(2) 比较运算： &gt;,&lt;,==,&gt;=,&lt;=,!= 比较运算返回的结果是一个布尔数组，每个元素为每个数组对应元素的比较结果。<br>(3) 逻辑运算：np.any函数表示逻辑or，np.all函数表示逻辑and，运算结果返回布尔值</p>
-<h3 id="3-2-2ufunc函数的广播机制"><a href="#3-2-2ufunc函数的广播机制" class="headerlink" title="3.2.2ufunc函数的广播机制"></a>3.2.2ufunc函数的广播机制</h3><p>广播指不同形状的数组之间执行算术运算的方式，需要遵循下面的原则<br>(1) 让所有输入数组都向其中shape最长的数组看齐，shape中不足的部分都通过在前面加1补齐<br>(2) 输入数组的shape是输入数组shape的各个轴上的最大值<br>(3) 如果输入数组的某个轴和输出数组的对应轴的长度相同或者其长度为1时，这个数组能够用来计算，否则出错。<br>(4) 当输入数组的某个轴的长度为1时，沿着此轴运算时都用此轴上的第一组值。<br><pre class="line-numbers language-none"><code class="language-none">A&#x3D;np.array([[0,0,0][1,1,1][2,2,2]]) 形状为(3,3)
-B&#x3D;np.array([1,2,3])                 形状为(3,)
-计算A+B
-# B的维度不够，会在左面补1 变成(1,3)
-# B会进行复制变成(3,3)
-# 在此基础上计算A+B<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+#输出
+a  2
+c  4
+d  5
+a  7
+Name:col, dtype: int64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>值得一提的是，创建Series时虽然指定了index参数，实际上Pandas还是哟隐藏的index位置标签<br>在此例中，仍可以使用t[0]来得到数据。如果index为整数标签，不能通过位置索引，因为会产生歧义。<br>2) 通过字典床价<br>数据存放在Python字典中，可以通过字典来创建Series<br><pre class="line-numbers language-none"><code class="language-none">sdata&#x3D;&#123;&#39;Ohio&#39;:35000,&#39;Texas&#39;:71000,&#39;Oregon&#39;:16000,&#39;Utah:8000&#39;&#125;
+obj&#x3D;pd.Series(sdata)
+print(obj)
+
+#输出
+Ohio:    35000
+Texas:   71000
+Oregon:  16000
+Utah:    8000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>如果没有指定index，那么字典的键作为Series的索引。<br>如果键和指定的index不匹配，对应的值为NaN(浮点型)，对应的<br><pre class="line-numbers language-none"><code class="language-none">sdata&#x3D;&#123;&quot;a&quot;:100,&quot;b&quot;:200,&quot;e&quot;:300&#125;
+letter&#x3D;[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;e&quot;]
+obj&#x3D;pd.Series(sdata,index&#x3D;letter)
+print(obj)
+
+#输出
+a    100.0
+b    200.0
+c    NaN
+e    300.0
+dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h2 id="1-2DataFrame"><a href="#1-2DataFrame" class="headerlink" title="1.2DataFrame"></a>1.2DataFrame</h2><p>DataFrame是一个表格型的数据结构，它含有一组有序的列，每列可以是不同类型的值(数值、字符串、布尔值等)。DataFrame既有行索引也有列索引，它可被看作由Series组成的字典。</p>
+<h3 id="DataFrame创建"><a href="#DataFrame创建" class="headerlink" title="DataFrame创建"></a>DataFrame创建</h3><p>常用的构建DataFrame的方法是直接传入一个由等长列表或NumPy数组组成的字典<br><pre class="line-numbers language-none"><code class="language-none">data&#x3D;&#123;&#39;name&#39;:[&#39;张三&#39;，&#39;李四&#39;,&#39;王五&#39;,&#39;小明&#39;]
+      &#39;sex&#39;:[&#39;female&#39;,&#39;female&#39;,&#39;male&#39;,&#39;male&#39;]  
+      &#39;year&#39;:[&#39;2001&#39;,&#39;2001&#39;,&#39;2003&#39;,&#39;2002&#39;]
+      &#39;city&#39;:[&#39;北京&#39;,&#39;上海&#39;,&#39;广州&#39;,&#39;北京&#39;]&#125;
+df&#x3D;pd.DataFrame(data)
+
+#输出
+    name    sex     year    city
+0   张三   female    2001    北京
+1   李四   female    2001    上海
+2   王五    male     2003    广州
+3   小明    male     2002    北京     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>DataFrame会自动加上索引，且有序排列。如果指定列名，那么会按照指定顺序排列<br><pre class="line-numbers language-none"><code class="language-none">data&#x3D;&#123;&#39;name&#39;:[&#39;张三&#39;，&#39;李四&#39;,&#39;王五&#39;,&#39;小明&#39;]
+      &#39;sex&#39;:[&#39;female&#39;,&#39;female&#39;,&#39;male&#39;,&#39;male&#39;]  
+      &#39;year&#39;:[&#39;2001&#39;,&#39;2001&#39;,&#39;2003&#39;,&#39;2002&#39;]
+      &#39;city&#39;:[&#39;北京&#39;,&#39;上海&#39;,&#39;广州&#39;,&#39;北京&#39;]&#125;
+df1&#x3D;pd.DataFrame(data,columns&#x3D;[&#39;name&#39;,&#39;year&#39;,&#39;sex&#39;,&#39;city&#39;])
+print(df1)
+
+#结果
+     name  year   sex    city
+0    张三   2001   female  北京
+1    李四   2001   female  上海
+2    王五   2003    male   广州 
+3    小明   2002    male   北京<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h3 id="1-3索引对象"><a href="#1-3索引对象" class="headerlink" title="1.3索引对象"></a>1.3索引对象</h3><p>构建Series和DataFrame时，所用到的任何数组或其他序列的标签都会被转换成一个 Index<br>索引对象不能被单独修改</p>
+<h3 id="1-4DataFrame的常用属性"><a href="#1-4DataFrame的常用属性" class="headerlink" title="1.4DataFrame的常用属性"></a>1.4DataFrame的常用属性</h3><p>DataFrame的基础属性由values、index、columns、dtypes、ndim和shape。分别得到DataFrame的元素、索引、列名、、类型、维度和形状</p>
+<h1 id="2-Pandas索引操作"><a href="#2-Pandas索引操作" class="headerlink" title="2.Pandas索引操作"></a>2.Pandas索引操作</h1><h2 id="2-1重建索引"><a href="#2-1重建索引" class="headerlink" title="2.1重建索引"></a>2.1重建索引</h2><p>索引对象无法修改，因此重建索引是指对索引对象重新排序而不是重新命名，当索引值不存在时，会引入缺失值。<br><pre class="line-numbers language-none"><code class="language-none">obj&#x3D;pd.Series([7.2,-4.3,4.5,3.6],index&#x3D;[&#39;b&#39;,&#39;a&#39;,&#39;d&#39;,&#39;c&#39;])
+print(obj)
+obj.reindex([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;])
+
+#输出
+b   7.2
+a  -4.3
+d   4.5
+c   3.6
+
+a   -4.3
+b    7.2
+c    3.6
+d    4.5
+e    NaN<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>重建索引引入的缺失值，可以使用fill_value参数补充<br><pre class="line-numbers language-none"><code class="language-none">obj.reindex([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;],fill_value&#x3D;0)
+a   -4.3
+b    7.2
+c    3.6
+d    4.5
+e    0.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>也可以使用method进行插值处理<br>method=’ffill’ 前向值填充   method=’bfill’ 后向值填充</p>
+<h2 id="2-2更换索引"><a href="#2-2更换索引" class="headerlink" title="2.2更换索引"></a>2.2更换索引</h2><p>使用set_index方法实现将列数据作为索引<br><pre class="line-numbers language-none"><code class="language-none">data&#x3D;&#123;&#39;name&#39;:[&#39;张三&#39;，&#39;李四&#39;,&#39;王五&#39;,&#39;小明&#39;]
+      &#39;sex&#39;:[&#39;female&#39;,&#39;female&#39;,&#39;male&#39;,&#39;male&#39;]  
+      &#39;year&#39;:[&#39;2001&#39;,&#39;2001&#39;,&#39;2003&#39;,&#39;2002&#39;]
+      &#39;city&#39;:[&#39;北京&#39;,&#39;上海&#39;,&#39;广州&#39;,&#39;北京&#39;]&#125;
+df1&#x3D;pd.DataFrame(data,columns&#x3D;[&#39;name&#39;,&#39;year&#39;,&#39;sex&#39;,&#39;city&#39;])
+df5&#x3D;df1.set_index(&#39;city&#39;)
+
+#输出
+city   name   year   sex
+北京    张三    2001  female
+上海    李四    2001  female
+广州    王五    2003   male
+北京    小明    2002   male<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h1 id="3DataFrame数据查询与编辑"><a href="#3DataFrame数据查询与编辑" class="headerlink" title="3DataFrame数据查询与编辑"></a>3DataFrame数据查询与编辑</h1><h2 id="3-1DataFrame数据查询"><a href="#3-1DataFrame数据查询" class="headerlink" title="3.1DataFrame数据查询"></a>3.1DataFrame数据查询</h2><h3 id="选取列"><a href="#选取列" class="headerlink" title="选取列"></a>选取列</h3><p>通过列索引标签或者属性的方式获取列数据<br><pre class="line-numbers language-none"><code class="language-none">df[&#39;name&#39;]
+df[[&#39;name&#39;,&#39;year&#39;]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<h3 id="选取行"><a href="#选取行" class="headerlink" title="选取行"></a>选取行</h3><p>通过行索引或者位置切片的形式来选取行<br><pre class="line-numbers language-none"><code class="language-none">df[:2]
+df[1:3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<h3 id="选取行和列"><a href="#选取行和列" class="headerlink" title="选取行和列"></a>选取行和列</h3><p>切片的方法无法获取单独的几行，可以使用loc和iloc方法实现<br>loc[start,stop]  基于标签<br>iloc[start,stop]  基于位置    左闭右开<br><pre class="line-numbers language-none"><code class="language-none">df.loc[[&#39;北京&#39;,&#39;上海&#39;],[&#39;name&#39;,&#39;year&#39;]]
+df.iloc[[1,3],[1,2]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<h2 id="DataFrame数据的编辑"><a href="#DataFrame数据的编辑" class="headerlink" title="DataFrame数据的编辑"></a>DataFrame数据的编辑</h2><h3 id="增加数据"><a href="#增加数据" class="headerlink" title="增加数据"></a>增加数据</h3><p>使用append方法传入字典 增加一行<br><pre class="line-numbers language-none"><code class="language-none">data1&#x3D;[]&#39;city&#39;:&#39;兰州&#39; ,&#39;name&#39;:&#39;李红&#39;,&#39;year&#39;:&#39;2005&#39;,&#39;sex&#39;:&#39;female&#39;&#125;
+df.append(data1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><br>增加列只需要直接赋值即可<br><pre class="line-numbers language-none"><code class="language-none">df5[&#39;age&#39;]&#x3D;20
+
+#输出
+city   name   year   sex     C
+北京    张三    2001  female  20
+上海    李四    2001  female  20
+广州    王五    2003   male   20
+北京    小明    2002   male   20<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>使用drop方法，通过axis参数确定删除行还是列<br><pre class="line-numbers language-none"><code class="language-none">df5.drop(&#39;广州&#39;)
+df5.drop(&#39;age&#39;,axis&#x3D;1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<h1 id="4-Pandas数据运算"><a href="#4-Pandas数据运算" class="headerlink" title="4.Pandas数据运算"></a>4.Pandas数据运算</h1><h1 id="5-Pandas数据载入与预处理"><a href="#5-Pandas数据载入与预处理" class="headerlink" title="5.Pandas数据载入与预处理"></a>5.Pandas数据载入与预处理</h1><h2 id="5-1数据载入"><a href="#5-1数据载入" class="headerlink" title="5.1数据载入"></a>5.1数据载入</h2><h3 id="5-1-1读-写文本文件"><a href="#5-1-1读-写文本文件" class="headerlink" title="5.1.1读/写文本文件"></a>5.1.1读/写文本文件</h3><h4 id="1-文本文件读取"><a href="#1-文本文件读取" class="headerlink" title="1.文本文件读取"></a>1.文本文件读取</h4><p>read_csv函数读取csv文件<br>pandas.read_csv(filepath_or_buffer, sep=’, ‘, delimiter=None, header=’infer’, names=None, …)</p>
+<ul>
+<li><code>filepath_or_buffer</code>：文件路径</li>
+<li><code>sep=&#39;,&#39;</code>：默认以 <code>,</code> 为数据分隔符</li>
+<li><code>skiprows</code>：跳过前几行</li>
+<li><code>nrows</code>：只读前几行</li>
+<li><code>parse_dates = [&#39;col_name&#39;]</code>：指定某行读取为日期格式</li>
+<li><code>index_col = [&#39;col_1&#39;/&#39;col_2&#39;]</code>：读取指定的几列</li>
+<li><code>error_bad_lines = False</code>：当某行数据有问题时，不报错，直接跳过，处理脏数据时使用</li>
+<li><code>na_values = &#39;NULL&#39;</code>：将NULL识别为空值</li>
+<li><code>header = 0</code>：表示以数据的第一行为列索引</li>
+<li><code>encoding = &quot;utf-8&quot;</code>：表明以utf-8为编码规则</li>
+<li><code>names = range(0,50))</code>：表示以[0…49]为列索引的名字</li>
+</ul>
+<p>（1）读取csv文件<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; import pandas as pd
+&gt;&gt;&gt; 
+&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;)
+&gt;&gt;&gt; print(df)
+    name  age
+0   小红   10
+1   小明   20
+2   小白   30
+&gt;&gt;&gt; print(type(df))
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+&gt;&gt;&gt; # 行和列
+&gt;&gt;&gt; print(df.shape)
+(3, 2)
+&gt;&gt;&gt; print(list(df.columns))
+[&#39;name&#39;, &#39;age&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>（2）读取txt文件<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.txt&quot;)
+&gt;&gt;&gt; print(df)
+    北京
+0   上海
+1   成都
+2   深圳
+3   广州
+4   广东<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<hr>
+<p> skiprows<br>跳过前n行<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;, skiprows&#x3D;2)
+&gt;&gt;&gt; print(df)
+    小明  20
+0   小白  30
+&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;, skiprows&#x3D;2)
+&gt;&gt;&gt; print(df)
+    小明  20
+0   小白  30<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> nrows<br>只读前几行<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;, nrows &#x3D;2)
+&gt;&gt;&gt; print(df)
+    name  age
+0   小红   10
+1   小明   20<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> index_col<br><code>index_col = [&#39;col_1&#39;;&#39;col_2&#39;]</code>：读取指定的几列。整数或者字符串或者整数/字符串列表。指定用作行标签的列。<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;, index_col &#x3D;[&#39;name&#39;])
+&gt;&gt;&gt; print(df)
+        age
+name       
+小红     10
+小明     20
+小白     30
+&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;, index_col&#x3D;1)
+&gt;&gt;&gt; print(df)
+      name
+age      
+10    小红
+20    小明
+30    小白<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> names<br><code>names = range(0,50)</code>：表示以[0…49]为列索引的名字</p>
+<p> 不与 <code>header=0</code> 共同使用<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;, names&#x3D;[&#39;姓名&#39;, &#39;年龄&#39;])
+&gt;&gt;&gt; print(df)
+    姓名  年龄
+0  name  age
+1   小红   10
+2   小明   20
+3   小白   30<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> 与 <code>header=0</code> 共同使用<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; df &#x3D; pd.read_csv(r&quot;E:\Python学习\test.csv&quot;, header&#x3D;0, names&#x3D;[&#39;姓名&#39;, &#39;年龄&#39;])
+&gt;&gt;&gt; print(df)
+   姓名  年龄
+0  小红  10
+1  小明  20
+2  小白  30<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h4 id="2-文本文件写入"><a href="#2-文本文件写入" class="headerlink" title="2.文本文件写入"></a>2.文本文件写入</h4><p>to_csv函数村文csv文件<br>pd.to_csv(path_or_buf, sep, na_rep, columns, header, index)</p>
+<ul>
+<li><code>path_or_buf</code>：str: 放文件名、相对路径、文件流等。</li>
+<li><code>sep</code>：分隔符。与<code>read_csv()</code>中<code>sep</code>参数意思一样。</li>
+<li><code>na_rep</code>：将NaN转换为特定值。</li>
+<li><code>columns</code>：指定哪些列写进去。</li>
+<li><code>header</code>：默认<code>header=0</code>，如果没有表头，设置<code>header=None</code>。</li>
+<li><code>index</code>：关于索引的，默认<code>True</code>，写入索引。</li>
+</ul>
+<p>（1）写入csv文件<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; import pandas as pd
+&gt;&gt;&gt; data &#x3D; [&#123;&#39;A&#39;: 1, &#39;B&#39;: 2&#125;, &#123;&#39;A&#39;: 3, &#39;B&#39;: 4, &#39;C&#39;: 5&#125;]
+&gt;&gt;&gt; df &#x3D; pd.DataFrame(data)
+&gt;&gt;&gt; print(df)
+   A  B    C
+0  1  2  NaN
+1  3  4  5.0
+&gt;&gt;&gt; print(type(df))
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+&gt;&gt;&gt; df.to_csv(&#39;test1.csv&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>可以看到生成了新文件：<code>test1.csv</code></p>
+<p>读取看看：<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; df1 &#x3D; pd.read_csv(r&quot;test1.csv&quot;, header&#x3D;0, encoding&#x3D;&quot;utf-8&quot;)
+&gt;&gt;&gt; print(df1)
+   0  A  B  C
+0  1  1  2 NaN
+1  2  3  4  5.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>（2）写入txt文件<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; data &#x3D; [&#123;&#39;A&#39;: 1, &#39;B&#39;: 2&#125;, &#123;&#39;A&#39;: 3, &#39;B&#39;: 4, &#39;C&#39;: 5&#125;]
+&gt;&gt;&gt; df &#x3D; pd.DataFrame(data)
+&gt;&gt;&gt; df.to_csv(&#39;test1.txt&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
+<p>生成新文件：<code>test1.txt</code><br><pre class="line-numbers language-text" data-language="text"><code class="language-text">文件内容：
+,A,B,C
+0,1,2,
+1,3,4,5.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> sep<br>设置分隔符<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; data &#x3D; [&#123;&#39;A&#39;: 1, &#39;B&#39;: 2&#125;, &#123;&#39;A&#39;: 3, &#39;B&#39;: 4, &#39;C&#39;: 5&#125;]
+&gt;&gt;&gt; df &#x3D; pd.DataFrame(data)
+&gt;&gt;&gt; df.to_csv(&#39;test2.csv&#39;, sep&#x3D;&#39;;&#39;) # 设置;为分割符
+&gt;&gt;&gt; print(df)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><br>生成文件：<br><pre class="line-numbers language-text" data-language="text"><code class="language-text">文件内容：
+;A;B;C
+0;1;2;
+1;3;4;5.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> na_rep：将NaN转换为特定值<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; data &#x3D; [&#123;&#39;A&#39;: 1, &#39;B&#39;: 2&#125;, &#123;&#39;A&#39;: 3, &#39;B&#39;: 4, &#39;C&#39;: 5&#125;]
+&gt;&gt;&gt; df &#x3D; pd.DataFrame(data)
+&gt;&gt;&gt; df.to_csv(&#39;test3.csv&#39;, na_rep&#x3D;&#39;100&#39;) # 空值替换为100
+&gt;&gt;&gt; print(df1)
+   Unnamed: 0  A  B      C
+0           0  1  2  100.0
+1           1  3  4    5.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> columns：指定哪些列写进去<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; data &#x3D; [&#123;&#39;A&#39;: 1, &#39;B&#39;: 2&#125;, &#123;&#39;A&#39;: 3, &#39;B&#39;: 4, &#39;C&#39;: 5&#125;]
+&gt;&gt;&gt; df &#x3D; pd.DataFrame(data)
+&gt;&gt;&gt; df.to_csv(&#39;test4.csv&#39;, columns&#x3D;[&#39;A&#39;, &#39;B&#39;]) # 只写入A、B列
+&gt;&gt;&gt; df1 &#x3D; pd.read_csv(&#39;test4.csv&#39;)
+&gt;&gt;&gt; print(df1)
+   Unnamed: 0  A  B
+0           0  1  2
+1           1  3  4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> header<br>默认<code>header=0</code>，如果没有表头，设置<code>header=None</code><br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; data &#x3D; [&#123;&#39;A&#39;: 1, &#39;B&#39;: 2&#125;, &#123;&#39;A&#39;: 3, &#39;B&#39;: 4, &#39;C&#39;: 5&#125;]
+&gt;&gt;&gt; df &#x3D; pd.DataFrame(data)
+&gt;&gt;&gt; df.to_csv(&#39;test5.csv&#39;, header&#x3D;None)
+&gt;&gt;&gt; df1 &#x3D; pd.read_csv(&#39;test5.csv&#39;)
+&gt;&gt;&gt; print(df1)
+   0  1  2    3
+0  0  1  2  NaN
+1  1  3  4  5.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p> index<br>关于索引的，默认<code>True</code>，写入索引</p>
+<p> 不保留索引<br><pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; data &#x3D; [&#123;&#39;A&#39;: 1, &#39;B&#39;: 2&#125;, &#123;&#39;A&#39;: 3, &#39;B&#39;: 4, &#39;C&#39;: 5&#125;]
+&gt;&gt;&gt; df &#x3D; pd.DataFrame(data)
+&gt;&gt;&gt; df.to_csv(&#39;test6.csv&#39;, index&#x3D;False)
+&gt;&gt;&gt; df1 &#x3D; pd.read_csv(&#39;test6.csv&#39;)
+&gt;&gt;&gt; print(df1)
+   A  B    C
+0  1  2  NaN
+1  3  4  5.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<h3 id="5-1-2读写excel文件"><a href="#5-1-2读写excel文件" class="headerlink" title="5.1.2读写excel文件"></a>5.1.2读写excel文件</h3><h4 id="1excel文件读取"><a href="#1excel文件读取" class="headerlink" title="1excel文件读取"></a>1excel文件读取</h4><p>read_excel(io,sheetname,header=0,index_col=None,names=None,dtype)<br>| 参数名 | 说明 |<br>| :—- | :—- |<br>| <code>io</code> | 文件路径 |<br>| <code>sheet_name</code> | 默认是<code>sheetname</code>为0（第一个sheet表）；<code>sheet_name=&quot;Sheet1&quot;</code>（指定表名）；返回多表使用<code>sheetname=[0,1]</code>，若<code>sheetname=None</code>返回全表。 |<br>| <code>header</code> | 指定作为列名的行，默认0，即取第一行，数据为列名行以下的数据；若数据不含列名，则设定<code>header = None</code>。 |<br>| <code>names</code> | 指定列的名字，传入一个<code>list</code>数据 |<br>| <code>index_col</code> | 指定列为索引列，默认<code>None</code>列（0索引）用作<code>DataFrame</code>的行标签。 |</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">&gt;&gt;&gt; import pandas as pd
+&gt;&gt;&gt; df &#x3D; pd.read_excel(r&#39;E:\Python学习\test.xls&#39;)
+&gt;&gt;&gt; print(df)
+   姓名  年龄 性别
+0  小白  20  男
+1  小黑  21  男
+2  小红  20  女<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2excel文件存储"><a href="#2excel文件存储" class="headerlink" title="2excel文件存储"></a>2excel文件存储</h4><p>to_excel(excel_writer=None,sheetname=None,na_rep=’’,header=True,index=True,index_label=None,mode=’w’,encoding=None)</p>
 
                 
             </div>
@@ -544,7 +708,7 @@ B&#x3D;np.array([1,2,3])                 形状为(3,)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/Python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/NUmPy%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/Python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/NUmPy%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/</a>
+                    <a href="https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/Python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/">https://cdsee045.github.io/%E5%B7%A5%E5%85%B7/Python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -625,62 +789,18 @@ B&#x3D;np.array([1,2,3])                 形状为(3,)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/%E5%B7%A5%E5%85%B7/Linux/%E5%B7%A5%E5%85%B7/LInux/Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                <a href="/%E5%B7%A5%E5%85%B7/Python/%E5%B7%A5%E5%85%B7/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/Pandas%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基础知识">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Pandas统计分析">
                         
-                        <span class="card-title">基础知识</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-06-02
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/%E5%B7%A5%E5%85%B7/Markdown/%E5%B7%A5%E5%85%B7/markdown/latex/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="latex符号对照表">
-                        
-                        <span class="card-title">latex符号对照表</span>
+                        <span class="card-title">Pandas统计分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -691,7 +811,53 @@ B&#x3D;np.array([1,2,3])                 形状为(3,)
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-06-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/%E5%B7%A5%E5%85%B7/Markdown/%E5%B7%A5%E5%85%B7/markdown/markdown/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Markdown基础">
+                        
+                        <span class="card-title">Markdown基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-06-02
                             </span>
                         <span class="publish-author">
                             
@@ -708,14 +874,6 @@ B&#x3D;np.array([1,2,3])                 形状为(3,)
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/latex/">
-                        <span class="chip bg-color">latex</span>
-                    </a>
-                    
                 </div>
                 
             </div>
