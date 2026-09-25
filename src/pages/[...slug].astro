@@ -1,0 +1,5 @@
+---
+import Layout from '../layouts/Layout.astro';import {getPosts} from '../data/articles';import legacy from '../data/legacy-routes.json';
+export async function getStaticPaths(){const posts=await getPosts();return [...posts.map(post=>({params:{slug:post.slug},props:{post}})),...legacy.map(slug=>({params:{slug},props:{post:null}}))]}const {post}=Astro.props;if(!post)return Astro.redirect("/blog/",301);
+---
+<Layout title={post.title} description={post.excerpt}><article class="article"><a class="meta" href="/blog/">← 全部文章</a><h1>{post.title}</h1><p class="meta"><time datetime={post.date}>{post.date}</time> · {post.category}</p><div class="prose" set:html={post.html}/><hr style="border:0;border-top:1px solid var(--line);margin-top:48px"/><a href="/blog/">← 返回文章列表</a></article></Layout>

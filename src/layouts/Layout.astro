@@ -1,0 +1,9 @@
+---
+import '../styles/global.css';
+import '../styles/hybrid.css';
+import {site} from '../data/site';
+const {title=site.name, description=site.description}=Astro.props;
+const path=Astro.url.pathname;
+const nav=[['/','首页'],['/blog/','博客'],['/projects/','项目'],['/tools/','工具导航'],['/about/','关于']];
+---
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><title>{title} · cdsee045</title><link rel="canonical" href={new URL(path,Astro.site)}/><link rel="icon" href="/favicon.svg"/><link rel="alternate" type="application/rss+xml" title="Weijian LI 的博客" href="/rss.xml"/><script is:inline>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||'light'}catch{}</script></head><body><a class="skip" href="#main">跳至内容</a><header class="header"><a class="brand" href="/">W<span class="brand-dot">.</span> LI <small>/ cdsee045</small></a><nav aria-label="主导航">{nav.map(([url,label])=><a href={url} aria-current={(url==='/'?path==='/':path.startsWith(url))?'page':undefined}>{label}</a>)}</nav><button id="theme" aria-label="切换深浅色" title="切换深浅色">◐</button></header><main id="main"><slot/></main><footer><span>© {new Date().getFullYear()} Weijian LI</span><div><a href="/rss.xml">RSS</a><a href={site.github}>GitHub ↗</a><a href="/about/">关于</a></div></footer><script>document.querySelector('#theme')?.addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('theme',t)}catch{}});</script></body></html>

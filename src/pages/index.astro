@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {site} from '../data/site';
+import {profile} from '../data/profile';
+---
+<Layout>
+  <div class="resume-layout">
+  <aside class="identity-panel">
+    <img class="portrait" src="/medias/avatar.jpg" alt="Weijian LI 的头像" width="180" height="180"/>
+      <h1>Weijian LI</h1>
+      <p class="meta">@cdsee045</p>
+      <div class="links"><a href={site.github}>GitHub ↗</a><a href="/blog/">博客</a><a href="/tools/">工具导航</a></div>
+      <nav class="resume-nav" aria-label="个人主页章节"><a href="#introduction">自我介绍</a><a href="#experience">个人经历</a><a href="#featured-projects">代表项目</a></nav>
+  </aside>
+  <div class="resume-content">
+  <section class="profile-section" aria-labelledby="introduction">
+    <div class="section-head"><span class="section-number">01</span><h2 id="introduction">自我介绍</h2></div>
+    <p class="intro">{profile.introduction || '待补充。'}</p>
+  </section>
+  <section class="profile-section" aria-labelledby="experience">
+    <div class="section-head"><span class="section-number">02</span><h2 id="experience">个人经历</h2></div>
+    {profile.experiences.length ? profile.experiences.map(item => <div class="post-row"><div><h3>{item.title}</h3><p class="meta">{item.description}</p></div><span class="meta">{item.period}</span></div>) : <p class="intro">待补充。</p>}
+  </section>
+  <section class="profile-section" aria-labelledby="featured-projects">
+    <div class="section-head"><span class="section-number">03</span><h2 id="featured-projects">代表项目</h2></div>
+    {profile.featuredProjects.length ? <div class="grid">{profile.featuredProjects.map(item => <div class="card"><h3>{item.name}</h3><p>{item.description}</p>{item.url && <a href={item.url}>查看项目 ↗</a>}</div>)}</div> : <p class="intro">待补充。</p>}
+  </section>
+  </div>
+  </div>
+</Layout>

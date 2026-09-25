@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';import {tools} from '../data/site';const categories=[...new Set(tools.map(t=>t.category))];
+---
+<Layout title="工具导航">
+  <span class="eyebrow">Resources & tools</span><h1 class="page-title">工具导航</h1>
+  <p class="intro">围绕现有笔记整理的文档与工具入口。</p>
+  <div class="directory-layout">
+    <aside class="directory-sidebar" aria-label="工具分类"><h2>浏览分类</h2><div class="filters"><button class="filter" aria-pressed="true" data-category="全部">全部工具</button>{categories.map(c=><button class="filter" aria-pressed="false" data-category={c}>{c}</button>)}</div></aside>
+    <div class="directory-main">
+      <input class="search" type="search" id="search" placeholder="搜索工具、用途或分类…" aria-label="搜索工具"/>
+      {categories.map((category,i)=><section class="tool-group" aria-labelledby={`category-${i}`}>
+        <h2 id={`category-${i}`}>{category}</h2>
+        <div class="grid tools">{tools.filter(t=>t.category===category).map(t=><a class="card result" href={t.url} target="_blank" rel="noopener noreferrer" data-category={t.category} data-search={`${t.name} ${t.description} ${t.category}`.toLowerCase()}>
+          <span class="tool-icon" aria-hidden="true">{t.name.slice(0,2)}</span><div class="tool-copy"><h3>{t.name}</h3><p>{t.description}</p></div><span class="arrow" aria-hidden="true">↗</span>
+        </a>)}</div>
+      </section>)}
+      <p id="empty" class="empty" hidden role="status">没有找到匹配工具，试试其他关键词。</p>
+    </div>
+  </div><script src="../scripts/filter.ts"/>
+</Layout>
