@@ -2,6 +2,8 @@
 
 Astro 静态网站，发布目标为 https://cdsee045.github.io/ 。包含博客、项目、工具导航和 Profile 文稿。
 
+完整的日常使用、内容修改和发布步骤请查看 [`使用说明.md`](./使用说明.md)。
+
 ## 本地使用
 
 需要 Node.js 24。
@@ -44,7 +46,7 @@ npm run check:links
 
 回退：将 main 的网站改动 revert 后重新运行部署；旧代码保留在备份分支。不要强制覆盖旧仓库历史。
 
-当前本地目录未连接 GitHub 账号，尚未向远程推送或更改线上站点。
+网站源码已发布到 `cdsee045/cdsee045.github.io`，推送到 `main` 后由 GitHub Actions 自动部署。
 
 ## 内容与版权
 
