@@ -1,30 +1,54 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import {site} from '../data/site';
-import {profile} from '../data/profile';
+import { profile } from '../data/profile';
+import '../styles/portfolio.css';
+const copy = {
+  about: { en: 'About Me', zh: '自我介绍' }, education: { en: 'Education', zh: '教育经历' },
+  projects: { en: 'Selected Projects', zh: '代表项目' }, experience: { en: 'Experience', zh: '其他履历' },
+  blog: { en: 'Blog', zh: '博客' }, tools: { en: 'Tools', zh: '工具导航' },
+  empty: { en: 'To be added.', zh: '待补充。' }, skip: { en: 'Skip to content', zh: '跳至正文' },
+};
+const sections=['about','education','projects','experience'] as const;
 ---
-<Layout>
-  <div class="resume-layout">
-  <aside class="identity-panel">
-    <img class="portrait" src="/medias/avatar.jpg" alt="Weijian LI 的头像" width="180" height="180"/>
-      <h1>Weijian LI</h1>
-      <p class="meta">@cdsee045</p>
-      <div class="links"><a href={site.github}>GitHub ↗</a><a href="/blog/">博客</a><a href="/tools/">工具导航</a></div>
-      <nav class="resume-nav" aria-label="个人主页章节"><a href="#introduction">自我介绍</a><a href="#experience">个人经历</a><a href="#featured-projects">代表项目</a></nav>
-  </aside>
-  <div class="resume-content">
-  <section class="profile-section" aria-labelledby="introduction">
-    <div class="section-head"><span class="section-number">01</span><h2 id="introduction">自我介绍</h2></div>
-    <p class="intro">{profile.introduction || '待补充。'}</p>
-  </section>
-  <section class="profile-section" aria-labelledby="experience">
-    <div class="section-head"><span class="section-number">02</span><h2 id="experience">个人经历</h2></div>
-    {profile.experiences.length ? profile.experiences.map(item => <div class="post-row"><div><h3>{item.title}</h3><p class="meta">{item.description}</p></div><span class="meta">{item.period}</span></div>) : <p class="intro">待补充。</p>}
-  </section>
-  <section class="profile-section" aria-labelledby="featured-projects">
-    <div class="section-head"><span class="section-number">03</span><h2 id="featured-projects">代表项目</h2></div>
-    {profile.featuredProjects.length ? <div class="grid">{profile.featuredProjects.map(item => <div class="card"><h3>{item.name}</h3><p>{item.description}</p>{item.url && <a href={item.url}>查看项目 ↗</a>}</div>)}</div> : <p class="intro">待补充。</p>}
-  </section>
-  </div>
-  </div>
-</Layout>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width"/>
+  <title>Weijian Li · Portfolio</title><meta name="description" content={profile.introduction.en}/>
+  <link rel="canonical" href={Astro.site}/><link rel="icon" href="/favicon.svg"/>
+  <script is:inline>try{if(localStorage.getItem('portfolio-language')==='zh')document.documentElement.lang='zh-CN'}catch{}</script>
+</head>
+<body>
+<a class="skip" href="#main" data-en={copy.skip.en} data-zh={copy.skip.zh}>{copy.skip.en}</a>
+<div class="topbar"><a href="/" class="wordmark">WL<span>.</span></a><div class="top-links"><a href="/blog/" data-en={copy.blog.en} data-zh={copy.blog.zh}>{copy.blog.en}</a><a href="/tools/" data-en={copy.tools.en} data-zh={copy.tools.zh}>{copy.tools.en}</a><div class="language" role="group" aria-label="Language / 语言"><button data-language="en" aria-pressed="true">EN</button><button data-language="zh" aria-pressed="false">中文</button></div></div></div>
+<div class="portfolio">
+<aside class="identity">
+  <img src={profile.avatar} alt="Weijian Li" width="160" height="160"/>
+  <h1>{profile.name}</h1>
+  <p class="role" data-en={profile.role.en} data-zh={profile.role.zh}>{profile.role.en}</p>
+  <p class="affiliation" data-en={profile.affiliation.en} data-zh={profile.affiliation.zh}>{profile.affiliation.en}</p>
+  <div class="terminal"><div><span>~</span> cat interests.txt</div><p data-en={profile.interests.en} data-zh={profile.interests.zh}>{profile.interests.en}</p></div>
+  <div class="contacts"><a href={`mailto:${profile.email}`}><span aria-hidden="true">@</span>{profile.email}</a><a href={profile.github} target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span>GitHub · cdsee045</a><a href={profile.bilibili} target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▷</span>Bilibili</a></div>
+</aside>
+<main id="main">
+  <nav aria-label="Page sections / 页面章节">{sections.map(key=><a href={`#${key}`} data-en={copy[key].en} data-zh={copy[key].zh}>{copy[key].en}</a>)}</nav>
+  <section id="about"><h2 data-en={copy.about.en} data-zh={copy.about.zh}>{copy.about.en}</h2><p class="introduction" data-en={profile.introduction.en} data-zh={profile.introduction.zh}>{profile.introduction.en}</p></section>
+  <section id="education"><h2 data-en={copy.education.en} data-zh={copy.education.zh}>{copy.education.en}</h2><div class="education-list">{profile.education.map(item=><article class="education-card"><div class="school-mark" aria-hidden="true">{item.code}</div><div><h3 data-en={item.school.en} data-zh={item.school.zh}>{item.school.en}</h3><p data-en={item.degree.en} data-zh={item.degree.zh}>{item.degree.en}</p><div class="education-meta"><time data-en={item.period.en} data-zh={item.period.zh}>{item.period.en}</time><span data-en={item.status.en} data-zh={item.status.zh}>{item.status.en}</span></div></div></article>)}</div></section>
+  <section id="projects"><h2 data-en={copy.projects.en} data-zh={copy.projects.zh}>{copy.projects.en}</h2>{profile.featuredProjects.length ? profile.featuredProjects.map(item=><article class="content-card"><h3 data-en={item.name.en} data-zh={item.name.zh}>{item.name.en}</h3><p data-en={item.description.en} data-zh={item.description.zh}>{item.description.en}</p>{item.url&&<a href={item.url}>↗ GitHub</a>}</article>) : <p class="placeholder" data-en={copy.empty.en} data-zh={copy.empty.zh}>{copy.empty.en}</p>}</section>
+  <section id="experience"><h2 data-en={copy.experience.en} data-zh={copy.experience.zh}>{copy.experience.en}</h2>{profile.experiences.length ? profile.experiences.map(item=><article class="content-card"><h3 data-en={item.name.en} data-zh={item.name.zh}>{item.name.en}</h3><p data-en={item.description.en} data-zh={item.description.zh}>{item.description.en}</p></article>) : <p class="placeholder" data-en={copy.empty.en} data-zh={copy.empty.zh}>{copy.empty.en}</p>}</section>
+  <footer>© {new Date().getFullYear()} Weijian Li</footer>
+</main>
+</div>
+<script>
+function setLanguage(language: string) {
+  const zh=language==='zh';
+  document.documentElement.lang=zh?'zh-CN':'en';
+  document.querySelectorAll<HTMLElement>('[data-en][data-zh]').forEach(el=>{el.textContent=(zh?el.dataset.zh:el.dataset.en)??'';});
+  document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));
+  document.title=zh?'Weijian Li · 个人主页':'Weijian Li · Portfolio';
+  const intro=document.querySelector<HTMLElement>('.introduction');
+  document.querySelector('meta[name="description"]')?.setAttribute('content',intro?.textContent??'');
+}
+setLanguage(document.documentElement.lang==='zh-CN'?'zh':'en');
+document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button=>button.addEventListener('click',()=>{const language=button.dataset.language!;setLanguage(language);try{localStorage.setItem('portfolio-language',language)}catch{}}));
+</script>
+</body></html>
