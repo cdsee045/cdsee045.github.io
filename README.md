@@ -23,7 +23,7 @@ npm run check:links
 - 首页自我介绍、个人经历、代表项目：`src/data/profile.js`，按注释补充即可。
 - 关于页：`src/pages/about.astro`。
 - 新文章：复制 `templates/new-post.md` 到 `src/content/posts/`，填写标题、英文 slug、日期、分类、摘要，将 draft 改为 false。正文支持 Markdown。
-- 新文章地址：`/blog/英文-slug/`；自动进入首页、博客搜索、RSS 和 sitemap。
+- 新文章地址：`/blog/英文-slug/`；自动进入博客列表、博客搜索、RSS 和 sitemap。首页不展示最近文章。
 - 图片：放入 `public/images/`，正文用 `/images/文件名`。
 - Profile：`profile/README.md`，需放到独立的 `cdsee045/cdsee045` 仓库根目录。
 
