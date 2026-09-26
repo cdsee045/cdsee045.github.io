@@ -1,20 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';import {tools} from '../data/site';const categories=[...new Set(tools.map(t=>t.category))];
+import Layout from '../layouts/Layout.astro';
+import {tools} from '../data/site';
+const categories=[...new Set(tools.map(t=>t.category))];
 ---
 <Layout title="工具导航">
-  <span class="eyebrow">Resources & tools</span><h1 class="page-title">工具导航</h1>
-  <p class="intro">围绕现有笔记整理的文档与工具入口。</p>
-  <div class="directory-layout">
-    <aside class="directory-sidebar" aria-label="工具分类"><h2>浏览分类</h2><div class="filters"><button class="filter" aria-pressed="true" data-category="全部">全部工具</button>{categories.map(c=><button class="filter" aria-pressed="false" data-category={c}>{c}</button>)}</div></aside>
-    <div class="directory-main">
-      <input class="search" type="search" id="search" placeholder="搜索工具、用途或分类…" aria-label="搜索工具"/>
-      {categories.map((category,i)=><section class="tool-group" aria-labelledby={`category-${i}`}>
-        <h2 id={`category-${i}`}>{category}</h2>
-        <div class="grid tools">{tools.filter(t=>t.category===category).map(t=><a class="card result" href={t.url} target="_blank" rel="noopener noreferrer" data-category={t.category} data-search={`${t.name} ${t.description} ${t.category}`.toLowerCase()}>
-          <span class="tool-icon" aria-hidden="true">{t.name.slice(0,2)}</span><div class="tool-copy"><h3>{t.name}</h3><p>{t.description}</p></div><span class="arrow" aria-hidden="true">↗</span>
-        </a>)}</div>
-      </section>)}
-      <p id="empty" class="empty" hidden role="status">没有找到匹配工具，试试其他关键词。</p>
-    </div>
-  </div><script src="../scripts/filter.ts"/>
+<div class="discovery"><span class="eyebrow">THE TOOL COLLECTION</span><h1>发现好用的<br/><em>网站 & 工具</em></h1><p>把常用入口放在一起，让灵感、学习和工作更顺手。</p><input class="search" id="search" type="search" placeholder="搜索工具名称、用途或分类…" aria-label="搜索工具"/><small>{tools.length} 个精选工具 · {categories.length} 个分类 · 持续整理中</small></div>
+<section class="catalog"><h2>按用途探索</h2><div class="filters">{['全部',...categories].map(c=><button class="filter" aria-pressed={c==='全部'} data-category={c}>{c==='全部'?'全部工具':c} <span>{c==='全部'?tools.length:tools.filter(t=>t.category===c).length}</span></button>)}</div>
+<div class="catalog-heading"><h2>精选工具</h2><span>点击卡片，直达官网 ↗</span></div>
+<div class="tool-tiles">{tools.map((t,i)=><a class="tool-tile result" href={t.url} target="_blank" rel="noopener noreferrer" data-category={t.category} data-search={`${t.name} ${t.description} ${t.category}`.toLowerCase()}><div class="tile-top"><span class={`site-mark mark-${i%5}`} aria-hidden="true">{t.name.slice(0,2)}</span><span aria-hidden="true">↗</span></div><h3>{t.name}</h3><p>{t.description}</p><div class="tile-bottom"><span>{t.category}</span><small>{new URL(t.url).hostname.replace(/^www\./,'')}</small></div></a>)}</div><div id="empty" class="empty" hidden role="status">没有找到匹配工具，试试其他关键词或选择全部工具。</div></section>
+<script src="../scripts/filter.ts"/>
 </Layout>
+<style>
+.discovery{text-align:center;padding:25px 0 52px}.discovery .eyebrow{font-size:11px;letter-spacing:3px}.discovery h1{font-size:clamp(34px,5vw,58px);line-height:1.22;letter-spacing:-2px;margin:20px 0}.discovery em{font-style:normal;color:var(--accent)}.discovery p{color:var(--muted);font-size:16px;margin:20px 0 28px}.discovery .search{display:block;max-width:660px;margin:0 auto 18px;padding:20px 24px;border-radius:14px;box-shadow:0 8px 32px #19362e08}.discovery small{font-size:12px;color:var(--muted)}.catalog>h2{font-size:16px}.catalog .filters{padding:6px 0 28px;border-bottom:1px solid var(--line);margin-bottom:0}.catalog .filter{border-radius:10px;padding:10px 18px}.filter span{font-size:11px;margin-left:16px;opacity:.75}.catalog-heading{display:flex;align-items:center;justify-content:space-between;padding:24px 0 18px;gap:16px}.catalog-heading h2{font-size:19px;margin:0}.catalog-heading>span{font-size:12px;color:var(--muted)}.tool-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.tool-tile{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .18s,border-color .18s,box-shadow .18s}.tool-tile:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 25px #19362e0c}.tile-top{display:flex;align-items:center;justify-content:space-between;color:var(--muted)}.site-mark{width:46px;height:46px;display:grid;place-items:center;border-radius:12px;font-size:18px;font-weight:700;background:#e7f5ef;color:#24745a}.mark-1{background:#e9efff;color:#4565c8}.mark-2{background:#f2ebff;color:#8855c7}.mark-3{background:#fff1df;color:#a76b28}.mark-4{background:#ffe8e8;color:#ba4646}.tool-tile h3{font-size:19px;margin:20px 0 8px;line-height:1.4}.tool-tile p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 24px;flex:1;min-height:48px}.tile-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:16px;font-size:11px;color:var(--muted)}.tile-bottom>span{background:var(--soft);color:var(--accent);border-radius:5px;padding:2px 8px}.tile-bottom small{overflow-wrap:anywhere}@media(max-width:850px){.tool-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.tool-tiles{grid-template-columns:1fr}.discovery{padding:10px 0 36px}.discovery h1{letter-spacing:-1px}.tool-tile{padding:20px}.catalog .filter{padding:8px 12px}}@media(prefers-reduced-motion:reduce){.tool-tile{transition:none}}
+</style>
