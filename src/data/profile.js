@@ -5,7 +5,7 @@ export const profile = {
   experiences: [
     {
       period: '2023-至今',
-      title:'TianJin University'
+      title:'TianJin University',
     },
   ],
   // 示例：{ name: '项目名称', description: '项目介绍', url: 'https://github.com/cdsee045/仓库名' }
