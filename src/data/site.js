@@ -13,6 +13,7 @@ export const tools = [
  ['Gemini','AI工具','谷/歌旗下的Gemini','https://gemini.google.com/app','/images/tools/gemini.png'],
  // 在线工具
  ['imgdiet','在线工具','在线图片编辑工具','https://www.imgdiet.com/zh-CN','/images/tools/imgdiet.ico'],
+ ['ZLibary','在线工具','免费电子书','https://z-library.bz/'],
  ['I love PDF','在线工具','在线pdf工具，格式转换','https://www.ilovepdf.com/zh-cn','/images/tools/ilovepdf.png'],
  //社交媒体
  ['GitHub','社交媒体','','https://github.com/'],
