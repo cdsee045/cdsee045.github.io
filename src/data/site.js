@@ -8,11 +8,11 @@ export const projects = [
 ];
 export const tools = [
  // 工具导航
- ['ChatGPT','AI工具','openai旗下的chatgpt','https://chatgpt.com/'],
- ['DeepSeek','AI工具','deepseek','https://www.deepseek.com/'],
- ['Gemini','AI工具','谷歌旗下的Gemini','https://gemini.google.com/app'],
+ ['ChatGPT','AI工具','openai旗下的chatgpt','https://chatgpt.com/','/images/tools/chatgpt.webp'],
+ ['DeepSeek','AI工具','deepseek','https://www.deepseek.com/','/images/tools/deepseek.ico'],
+ ['Gemini','AI工具','谷歌旗下的Gemini','https://gemini.google.com/app','/images/tools/gemini.png'],
  
- ['imgdiet','在线工具','在线图片编辑工具','https://www.imgdiet.com/zh-CN'],
- ['I love PDF','在线工具','在线pdf工具，格式转换','https://www.ilovepdf.com/zh-cn'],
+ ['imgdiet','在线工具','在线图片编辑工具','https://www.imgdiet.com/zh-CN','/images/tools/imgdiet.ico'],
+ ['I love PDF','在线工具','在线pdf工具，格式转换','https://www.ilovepdf.com/zh-cn','/images/tools/ilovepdf.png'],
 
-].map(([name,category,description,url])=>({name,category,description,url}));
+].map(([name,category,description,url,image])=>({name,category,description,url,image}));

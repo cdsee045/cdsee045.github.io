@@ -7,7 +7,7 @@ const categories=[...new Set(tools.map(t=>t.category))];
 <div class="discovery"><span class="eyebrow">THE TOOL COLLECTION</span><h1>发现好用的<br/><em>网站 & 工具</em></h1><p>把常用入口放在一起，让灵感、学习和工作更顺手。</p><input class="search" id="search" type="search" placeholder="搜索工具名称、用途或分类…" aria-label="搜索工具"/><small>{tools.length} 个精选工具 · {categories.length} 个分类 · 持续整理中</small></div>
 <section class="catalog"><h2>按用途探索</h2><div class="filters">{['全部',...categories].map(c=><button class="filter" aria-pressed={c==='全部'} data-category={c}>{c==='全部'?'全部工具':c} <span>{c==='全部'?tools.length:tools.filter(t=>t.category===c).length}</span></button>)}</div>
 <div class="catalog-heading"><h2>精选工具</h2><span>点击卡片，直达官网 ↗</span></div>
-<div class="tool-tiles">{tools.map((t,i)=><a class="tool-tile result" href={t.url} target="_blank" rel="noopener noreferrer" data-category={t.category} data-search={`${t.name} ${t.description} ${t.category}`.toLowerCase()}><div class="tile-top"><span class={`site-mark mark-${i%5}`} aria-hidden="true">{t.name.slice(0,2)}</span><span aria-hidden="true">↗</span></div><h3>{t.name}</h3><p>{t.description}</p><div class="tile-bottom"><span>{t.category}</span><small>{new URL(t.url).hostname.replace(/^www\./,'')}</small></div></a>)}</div><div id="empty" class="empty" hidden role="status">没有找到匹配工具，试试其他关键词或选择全部工具。</div></section>
+<div class="tool-tiles">{tools.map((t,i)=><a class="tool-tile result" href={t.url} target="_blank" rel="noopener noreferrer" data-category={t.category} data-search={`${t.name} ${t.description} ${t.category}`.toLowerCase()}><div class="tile-top">{t.image?<span class="tool-logo" aria-hidden="true"><img src={t.image} alt="" loading="lazy"/></span>:<span class={`site-mark mark-${i%5}`} aria-hidden="true">{t.name.slice(0,2)}</span>}<span aria-hidden="true">↗</span></div><h3>{t.name}</h3><p>{t.description}</p><div class="tile-bottom"><span>{t.category}</span><small>{new URL(t.url).hostname.replace(/^www\./,'')}</small></div></a>)}</div><div id="empty" class="empty" hidden role="status">没有找到匹配工具，试试其他关键词或选择全部工具。</div></section>
 <script src="../scripts/filter.ts"/>
 </Layout>
 <style>
@@ -17,4 +17,6 @@ const categories=[...new Set(tools.map(t=>t.category))];
 .mark-2{background:rgba(188,140,255,.12);color:var(--purple);border-color:rgba(188,140,255,.25)}
 .mark-3{background:rgba(240,136,62,.12);color:var(--orange);border-color:rgba(240,136,62,.25)}
 .mark-4{background:rgba(86,212,221,.1);color:var(--cyan);border-color:rgba(86,212,221,.25)}
+.tool-logo{width:46px;height:46px;display:grid;place-items:center;overflow:hidden;border-radius:12px;background:#fff;border:1px solid var(--line)}
+.tool-logo img{display:block;width:34px;height:34px;object-fit:contain}
 </style>

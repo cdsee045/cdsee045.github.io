@@ -13,8 +13,8 @@ export const profile = {
     zh: '你好，我是李威检，目前正在天津大学完成自动化专业的本科学习，也正在学习 Blender 渲染。',
   },
   education: [
-    { code: 'TJU', school: { en: 'Tianjin University', zh: '天津大学' }, degree: { en: 'Undergraduate · Automation', zh: '本科生 · 自动化' }, period: { en: '2023 — 2027', zh: '2023 — 2027' }, status: { en: 'In progress', zh: '在读' } },
-    { code: 'BUAA', school: { en: 'Beihang University', zh: '北京航空航天大学' }, degree: { en: 'Master’s · Control Science and Engineering', zh: '硕士生 · 控制科学与工程' }, period: { en: '2027 —', zh: '2027 —' }, status: { en: 'Expected enrollment in 2027', zh: '预计 2027 年入学' } },
+    { logo: '/images/schools/tju-logo.png', school: { en: 'Tianjin University', zh: '天津大学' }, degree: { en: 'Undergraduate · Automation', zh: '本科生 · 自动化' }, period: { en: '2023 — 2027', zh: '2023 — 2027' }, status: { en: 'In progress', zh: '在读' } },
+    { logo: '/images/schools/buaa-logo.png', school: { en: 'Beihang University', zh: '北京航空航天大学' }, degree: { en: 'Master’s · Control Science and Engineering', zh: '硕士生 · 控制科学与工程' }, period: { en: '2027 —', zh: '2027 —' }, status: { en: 'Expected enrollment in 2027', zh: '预计 2027 年入学' } },
   ],
   // Example: { name: {en: 'Project', zh: '项目'}, description: {en: 'Description', zh: '介绍'}, url: 'https://...' }
   featuredProjects: [],
