@@ -10,9 +10,14 @@ export const tools = [
  // 工具导航
  ['ChatGPT','AI工具','openai旗下的chatgpt','https://chatgpt.com/','/images/tools/chatgpt.webp'],
  ['DeepSeek','AI工具','deepseek','https://www.deepseek.com/','/images/tools/deepseek.ico'],
- ['Gemini','AI工具','谷歌旗下的Gemini','https://gemini.google.com/app','/images/tools/gemini.png'],
- 
+ ['Gemini','AI工具','谷/歌旗下的Gemini','https://gemini.google.com/app','/images/tools/gemini.png'],
+ // 在线工具
  ['imgdiet','在线工具','在线图片编辑工具','https://www.imgdiet.com/zh-CN','/images/tools/imgdiet.ico'],
  ['I love PDF','在线工具','在线pdf工具，格式转换','https://www.ilovepdf.com/zh-cn','/images/tools/ilovepdf.png'],
-
+ //社交媒体
+ ['GitHub','社交媒体','','https://github.com/'],
+ ['知乎','社交媒体','','https://www.zhihu.com/'],
+ ['小红书','社交媒体','','https://www.xiaohongshu.com/explore'],
+ ['哔哩哔哩','社交媒体','','https://www.bilibili.com/'],
+ ['LinuxDo','社交媒体','','https://linux.do/'],
 ].map(([name,category,description,url,image])=>({name,category,description,url,image}));
