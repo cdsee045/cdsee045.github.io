@@ -3,7 +3,7 @@ import { profile } from '../data/profile';
 import '../styles/portfolio.css';
 const copy = {
   about: { en: 'About Me', zh: '自我介绍' }, education: { en: 'Education', zh: '教育经历' },
-  projects: { en: 'Selected Projects', zh: '代表项目' }, experience: { en: 'Experience', zh: '其他履历' },
+  projects: { en: 'Selected Projects', zh: '代表项目' }, experience: { en: 'Experience', zh: '工作经历' },
   blog: { en: 'Blog', zh: '博客' }, tools: { en: 'Tools', zh: '工具导航' },
   empty: { en: 'To be added.', zh: '待补充。' }, skip: { en: 'Skip to content', zh: '跳至正文' },
 };
@@ -15,7 +15,7 @@ const sections=['about','education','projects','experience'] as const;
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width"/>
   <title>Weijian Li · Portfolio</title><meta name="description" content={profile.introduction.en}/>
   <link rel="canonical" href={Astro.site}/><link rel="icon" href="/favicon.svg"/>
-  <style>.education-card .school-mark{display:grid;place-items:center;overflow:hidden;padding:3px;background:#fff}.education-card .school-mark img{display:block;width:100%;height:100%;object-fit:contain}</style>
+  <style>.education-card .school-mark{display:grid;place-items:center;overflow:hidden;padding:3px;background:#fff}.education-card .school-mark img{display:block;width:100%;height:100%;object-fit:contain}.content-card p{font-size:14px;color:var(--muted);margin:6px 0 0}.experience-period{display:block;margin-top:12px;color:#56d4dd;font:12px/1.8 ui-monospace,monospace}</style>
   <script is:inline>try{if(localStorage.getItem('portfolio-language')==='zh')document.documentElement.lang='zh-CN'}catch{}</script>
 </head>
 <body>
@@ -35,7 +35,7 @@ const sections=['about','education','projects','experience'] as const;
   <section id="about"><h2 data-en={copy.about.en} data-zh={copy.about.zh}>{copy.about.en}</h2><p class="introduction" data-en={profile.introduction.en} data-zh={profile.introduction.zh}>{profile.introduction.en}</p></section>
   <section id="education"><h2 data-en={copy.education.en} data-zh={copy.education.zh}>{copy.education.en}</h2><div class="education-list">{profile.education.map(item=><article class="education-card"><div class="school-mark" aria-hidden="true"><img src={item.logo} alt="" loading="lazy"/></div><div><h3 data-en={item.school.en} data-zh={item.school.zh}>{item.school.en}</h3><p data-en={item.degree.en} data-zh={item.degree.zh}>{item.degree.en}</p><div class="education-meta"><time data-en={item.period.en} data-zh={item.period.zh}>{item.period.en}</time><span data-en={item.status.en} data-zh={item.status.zh}>{item.status.en}</span></div></div></article>)}</div></section>
   <section id="projects"><h2 data-en={copy.projects.en} data-zh={copy.projects.zh}>{copy.projects.en}</h2>{profile.featuredProjects.length ? profile.featuredProjects.map(item=><article class="content-card"><h3 data-en={item.name.en} data-zh={item.name.zh}>{item.name.en}</h3><p data-en={item.description.en} data-zh={item.description.zh}>{item.description.en}</p>{item.url&&<a href={item.url}>↗ GitHub</a>}</article>) : <p class="placeholder" data-en={copy.empty.en} data-zh={copy.empty.zh}>{copy.empty.en}</p>}</section>
-  <section id="experience"><h2 data-en={copy.experience.en} data-zh={copy.experience.zh}>{copy.experience.en}</h2>{profile.experiences.length ? profile.experiences.map(item=><article class="content-card"><h3 data-en={item.name.en} data-zh={item.name.zh}>{item.name.en}</h3><p data-en={item.description.en} data-zh={item.description.zh}>{item.description.en}</p></article>) : <p class="placeholder" data-en={copy.empty.en} data-zh={copy.empty.zh}>{copy.empty.en}</p>}</section>
+  <section id="experience"><h2 data-en={copy.experience.en} data-zh={copy.experience.zh}>{copy.experience.en}</h2>{profile.experiences.length ? profile.experiences.map(item=><article class="content-card"><h3 data-en={item.name.en} data-zh={item.name.zh}>{item.name.en}</h3><p data-en={item.description.en} data-zh={item.description.zh}>{item.description.en}</p><time class="experience-period" data-en={item.period.en} data-zh={item.period.zh}>{item.period.en}</time></article>) : <p class="placeholder" data-en={copy.empty.en} data-zh={copy.empty.zh}>{copy.empty.en}</p>}</section>
   <footer>© {new Date().getFullYear()} Weijian Li</footer>
 </main>
 </div>

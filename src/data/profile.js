@@ -18,5 +18,11 @@ export const profile = {
   ],
   // Example: { name: {en: 'Project', zh: '项目'}, description: {en: 'Description', zh: '介绍'}, url: 'https://...' }
   featuredProjects: [],
-  experiences: [],
+  experiences: [
+    {
+      name: { en: 'Zhixie Huitong', zh: '智协慧同' },
+      description: { en: 'Diagnostic Development Intern', zh: '诊断开发实习生' },
+      period: { en: 'Oct 2026 — Present', zh: '2026.10 — 至今' },
+    },
+  ],
 };
