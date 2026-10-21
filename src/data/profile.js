@@ -20,6 +20,7 @@ export const profile = {
   featuredProjects: [],
   experiences: [
     {
+      logo: '/images/companies/zhixie-huitong-logo.jpg',
       name: { en: 'Zhixie Huitong', zh: '智协慧同' },
       description: { en: 'Diagnostic Development Intern', zh: '诊断开发实习生' },
       period: { en: 'Oct 2026 — Present', zh: '2026.10 — 至今' },
