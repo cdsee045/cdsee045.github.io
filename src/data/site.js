@@ -12,7 +12,7 @@ export const tools = [
   ['YouTube','社交媒体','','https://www.youtube.com/','/images/tools/youtube.png','YouTube'],
   ['ChatGPT','AI工具','openai旗下的chatgpt','https://chatgpt.com/','/images/tools/chatgpt.webp','ChatGPT'],
   ['DeepSeek','AI工具','deepseek','https://www.deepseek.com/','/images/tools/deepseek.ico','DeepSeek'],
-  ['FTA','在线工具','https://www.faulttreeanalysis.top/zh/','','FTA Genator'],
+  ['FTA','在线工具','','https://www.faulttreeanalysis.top/zh/','','FTA Genator'],
   ['Gemini','AI工具','谷/歌旗下的Gemini','https://gemini.google.com/app','/images/tools/gemini.png','Gemini'],
   ['GitHub','社交媒体','','https://github.com/','/images/tools/github.svg','GitHub'],
   ['I love PDF','在线工具','在线pdf工具，格式转换','https://www.ilovepdf.com/zh-cn','/images/tools/ilovepdf.png','I love PDF'],
