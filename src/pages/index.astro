@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import { profile } from '../data/profile';
 import '../styles/portfolio.css';
 const copy = {
@@ -23,7 +24,7 @@ const sections=['about','education','projects','experience'] as const;
 <div class="topbar"><a href="/" class="wordmark">WL<span>.</span></a><div class="top-links"><a href="/blog/" data-en={copy.blog.en} data-zh={copy.blog.zh}>{copy.blog.en}</a><a href="/tools/" data-en={copy.tools.en} data-zh={copy.tools.zh}>{copy.tools.en}</a><div class="language" role="group" aria-label="Language / 语言"><button data-language="en" aria-pressed="true">EN</button><button data-language="zh" aria-pressed="false">中文</button></div></div></div>
 <div class="portfolio">
 <aside class="identity">
-  <img src={profile.avatar} alt="Weijian Li" width="160" height="160"/>
+  <Image src={profile.avatar} alt="Weijian Li" width={160} height={160} widths={[160, 320, 480]} sizes="(max-width: 640px) 112px, 160px" format="webp" fit="cover" loading="eager"/>
   <h1>{profile.name}</h1>
   <p class="role" data-en={profile.role.en} data-zh={profile.role.zh}>{profile.role.en}</p>
   <p class="affiliation" data-en={profile.affiliation.en} data-zh={profile.affiliation.zh}>{profile.affiliation.en}</p>

@@ -1,7 +1,9 @@
+import avatar from '../assets/avatar.jpg';
+
 // Homepage content: provide both en and zh for each translated field.
 export const profile = {
   name: 'Weijian Li',
-  avatar: '/medias/avatar.jpg',
+  avatar,
   email: 'weijianli@tju.edu.cn',
   github: 'https://github.com/cdsee045',
   bilibili: 'https://www.bilibili.com/',
