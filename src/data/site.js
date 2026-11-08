@@ -14,6 +14,7 @@ export const tools = [
   ['AI Pai Box','AI工具','AI API 控制台','https://api.aipaibox.com/console','/images/tools/aipaibox.png','AI Pai Box'],
   ['Claude','AI工具','Anthropic 旗下的 AI 助手','https://claude.ai/','/images/tools/claude.ico','Claude'],
   ['DeepSeek','AI工具','deepseek','https://www.deepseek.com/','/images/tools/deepseek.ico','DeepSeek'],
+  ['PriceAI','AI工具','AI 订阅与 API 价格比较','https://priceai.cc/','/images/tools/priceai.svg','PriceAI'],
   ['FTA','在线工具','','https://www.faulttreeanalysis.top/zh/','/images/tools/fta.svg','FTA Genator'],
   ['Gemini','AI工具','谷/歌旗下的Gemini','https://gemini.google.com/app','/images/tools/gemini.png','Gemini'],
   ['GitHub','社交媒体','','https://github.com/','/images/tools/github.svg','GitHub'],
