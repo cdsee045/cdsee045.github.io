@@ -12,7 +12,7 @@ export const tools = [
   ['YouTube','社交媒体','','https://www.youtube.com/','/images/tools/youtube.png','YouTube'],
   ['ChatGPT','AI工具','openai旗下的chatgpt','https://chatgpt.com/','/images/tools/chatgpt.webp','ChatGPT'],
   ['AI Pai Box','AI工具','AI API 控制台','https://api.aipaibox.com/console','/images/tools/aipaibox.png','AI Pai Box'],
-  ['Artificial Analysis','AI工具','独立 AI 模型性能、价格与服务商分析','https://artificialanalysis.ai/zh','/images/tools/artificial-analysis.svg','Artificial Analysis'],
+  ['Artificial Analysis','AI工具','独立 AI 模型性能、价格与服务商分析','https://artificialanalysis.ai/zh','/images/tools/artificial-analysis.ico','Artificial Analysis'],
   ['Claude','AI工具','Anthropic 旗下的 AI 助手','https://claude.ai/','/images/tools/claude.ico','Claude'],
   ['DeepSeek','AI工具','deepseek','https://www.deepseek.com/','/images/tools/deepseek.ico','DeepSeek'],
   ['PriceAI','AI工具','AI 订阅与 API 价格比较','https://priceai.cc/','/images/tools/priceai.svg','PriceAI'],
@@ -30,7 +30,7 @@ export const tools = [
   ['小红书','社交媒体','','https://www.xiaohongshu.com/explore','/images/tools/xiaohongshu.png','Xiaohongshu'],
   ['Z-Library','在线工具','免费电子书','https://z-library.bz/','/images/tools/z-library.png','Z-Library'],
   ['知乎','社交媒体','','https://www.zhihu.com/','/images/tools/zhihu.ico','Zhihu'],
-  ['TradingView','投资理财','全球市场行情、图表与技术分析平台','https://cn.tradingview.com/','/images/tools/tradingview.svg','TradingView'],
+  ['TradingView','投资理财','全球市场行情、图表与技术分析平台','https://cn.tradingview.com/','/images/tools/tradingview.png','TradingView'],
 ]
   .map(([name,category,description,url,image,sortName])=>({name,category,description,url,image,sortName}))
   .sort((a,b)=>a.sortName.localeCompare(b.sortName,'en',{sensitivity:'base'}));
