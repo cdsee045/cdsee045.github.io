@@ -26,6 +26,7 @@ export const tools = [
   ['IP查询','网络工具','IP检测工具','https://ip.net.coffee/','/images/tools/ip-query.svg','IP Lookup'],
   ['LinuxDo','社交媒体','','https://linux.do/','/images/tools/linuxdo.svg','LinuxDo'],
   ['良心云','网络工具','','https://xn--9kqz23b19z.com/#/login','/images/tools/liangxinyun.png','Liangxinyun'],
+  ['Leafiel','网络工具','服务器状态、流量与网络质量监测（妙妙屋X）','https://mmw.beyonder.cc/','/images/tools/leafiel.ico','Leafiel'],
   ['VPS兄弟会','网络工具','VPS 评测、推荐与优惠信息','https://www.vpsbros.com/','/images/tools/vpsbros.png','VPSBros'],
   ['小红书','社交媒体','','https://www.xiaohongshu.com/explore','/images/tools/xiaohongshu.png','Xiaohongshu'],
   ['Z-Library','在线工具','免费电子书','https://z-library.bz/','/images/tools/z-library.png','Z-Library'],
